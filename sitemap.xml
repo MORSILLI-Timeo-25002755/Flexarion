@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   FLEXARION — Plan du site XML (sitemap.xml)
-  Domaine officiel à remplacer : https://www.flexarion.example
+  Domaine officiel à remplacer : https://www.flexarion.timeoms.fr
   Les balises <lastmod> ne doivent être conservées que si elles sont tenues à jour
   lors des modifications réelles de chaque page.
-  Seules les pages publiques et indexables sont listées ici (ni 404.html, ni modèles).
+  Seules les pages publiques et indexables sont listées ici (ni 404.html).
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -21,6 +21,21 @@
     <loc>https://www.flexarion.timeoms.fr/games.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.flexarion.timeoms.fr/games/les-veilleurs-de-brume.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.flexarion.timeoms.fr/games/neon-calanques.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.flexarion.timeoms.fr/games/lisiere.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.flexarion.timeoms.fr/faq.html</loc>

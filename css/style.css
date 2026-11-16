@@ -493,6 +493,10 @@ a { color: inherit; text-decoration: none; }
   transform-origin: bottom;
   pointer-events: none;
 }
+.pt-leave .page-curtain {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
 .page-curtain__label {
   font-family: var(--f-display);
   font-weight: 700;

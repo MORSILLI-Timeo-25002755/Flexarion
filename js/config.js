@@ -16,9 +16,7 @@
  * ============================================================================
  */
 window.FLEXARION_CONFIG = Object.freeze({
-  /* Domaine officiel (sans barre oblique finale). À remplacer partout :
-     rechercher « https://www.flexarion.example » dans le projet. */
-  siteUrl: 'https://www.flexarion.example',
+  siteUrl: 'https://www.flexarion.timeoms.fr',
 
   studio: {
     name: 'Flexarion',
@@ -31,8 +29,7 @@ window.FLEXARION_CONFIG = Object.freeze({
   },
 
   contact: {
-    /* Adresse e-mail publique du studio — PLACEHOLDER à remplacer. */
-    email: 'contact@flexarion.example',
+    email: 'contact@flexarion.timeoms.fr',
   },
 
   /* Formulaire de contact.
@@ -64,14 +61,12 @@ window.FLEXARION_CONFIG = Object.freeze({
     enrique: { name: 'Enrique Ruiz', role: '', bio: '' },
   },
 
-  /* Jeux — aucun projet officiel annoncé pour l'instant.
-     Les cartes de games.html sont des EMPLACEMENTS RÉSERVÉS clairement signalés.
+  /* Jeux — concepts originaux présentés sur le site.
      status : "dev" (en développement) | "soon" (à venir) | "available" (disponible)
-     detailUrl : chemin de la fiche détaillée (ex. "games/nom-du-jeu.html"),
-                 à créer à partir de games/modele-fiche-jeu.html. */
+     detailUrl : chemin de la fiche détaillée (ex. "games/nom-du-jeu.html"). */
   games: [
-    { id: 'projet-01', name: '', status: 'dev', genre: '', platforms: [], detailUrl: '' },
-    { id: 'projet-02', name: '', status: 'soon', genre: '', platforms: [], detailUrl: '' },
-    { id: 'projet-03', name: '', status: 'soon', genre: '', platforms: [], detailUrl: '' },
+    { id: 'projet-01', name: 'Les Veilleurs de Brume', status: 'dev', genre: 'Aventure narrative', platforms: ['PC'], detailUrl: 'games.html#projet-01' },
+    { id: 'projet-02', name: 'Neon Calanques', status: 'soon', genre: 'Action roguelite', platforms: ['PC', 'Console'], detailUrl: 'games.html#projet-02' },
+    { id: 'projet-03', name: 'Lisière', status: 'soon', genre: 'Puzzle contemplatif', platforms: ['PC', 'Mobile'], detailUrl: 'games.html#projet-03' },
   ],
 });

@@ -1,13 +1,10 @@
 # ============================================================================
 # FLEXARION — robots.txt
-# Domaine officiel à remplacer : https://www.flexarion.example
+# Domaine officiel à remplacer : https://www.flexarion.timeoms.fr
 # ============================================================================
 
 User-agent: *
 Allow: /
 
-# Ne pas indexer le modèle de fiche jeu tant qu'il ne s'agit pas d'un projet réel
-Disallow: /games/modele-fiche-jeu.html
-
-# Emplacement du plan du site XML (remplacer par le domaine officiel)
-Sitemap: https://www.flexarion.example/sitemap.xml
+# Emplacement du plan du site XML
+Sitemap: https://www.flexarion.timeoms.fr/sitemap.xml
