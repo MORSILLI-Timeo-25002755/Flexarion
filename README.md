@@ -28,7 +28,9 @@ flexarion/
 ├── privacy.html                # Politique de confidentialité (RGPD)
 ├── 404.html                    # Page d'erreur 404 (noindex)
 ├── games/
-│   └── modele-fiche-jeu.html   # Gabarit non indexé pour les futures fiches de jeux
+│   ├── les-veilleurs-de-brume.html
+│   ├── neon-calanques.html
+│   └── lisiere.html
 ├── robots.txt
 ├── sitemap.xml
 ├── site.webmanifest
@@ -55,11 +57,11 @@ flexarion/
 
 Toutes les données provisoires sont repérables par la classe `.ph` ou les occurrences suivantes :
 
-1. **Domaine officiel** : remplacer `https://www.flexarion.example` dans toutes les pages HTML (`canonical`, `og:url`, `og:image`, `twitter:image`, JSON-LD), `robots.txt`, `sitemap.xml` et `js/config.js`.
-2. **Adresse e-mail** : remplacer `contact@flexarion.example` dans `js/config.js` et dans les fichiers HTML (balises `mailto:` et JSON-LD).
+1. **Domaine officiel** : le site est configuré pour `https://www.flexarion.timeoms.fr` dans les pages HTML, `robots.txt`, `sitemap.xml` et `js/config.js`.
+2. **Adresse e-mail** : l’adresse publique configurée est `contact@flexarion.timeoms.fr` ; remplacez-la si nécessaire dans `js/config.js` et les fichiers HTML.
 3. **Réseaux sociaux** : renseigner les URLs officielles (Instagram, TikTok, YouTube, Discord, X) dans `js/config.js` et les ajouter dans le tableau `"sameAs"` du JSON-LD `Organization` (`index.html`, `studio.html`).
 4. **Équipe** : renseigner les rôles et biographies dans `js/config.js`, `index.html`, `studio.html` et `credits.html`, puis remplacer les portraits dans `assets/images/team/`.
-5. **Projets / Jeux** : remplacer les emplacements réservés dans `index.html`, `games.html` et `js/config.js`. Lorsqu’un jeu est officiellement annoncé, dupliquer `games/modele-fiche-jeu.html`, passer `<meta name="robots">` à `index, follow`, ajouter son JSON-LD `VideoGame` et l’inscrire dans `sitemap.xml`.
+5. **Projets / Jeux** : les fiches indexables de `Les Veilleurs de Brume`, `Neon Calanques` et `Lisière` sont publiées dans `games/`, référencées depuis `index.html`, `games.html`, `js/config.js` et `sitemap.xml`.
 6. **Mentions légales & Confidentialité** : compléter les blocs `[À COMPLÉTER ...]` dans `legal.html` et `privacy.html` (éditeur, directeur de publication, hébergeur, durée de conservation).
 7. **Formulaire de contact** : par défaut, `js/contact.js` ne simule aucun envoi sans serveur. Pour activer l’envoi direct, renseigner `form.endpoint` dans `js/config.js` (ex. Formspree, Basin, fonction serverless ou script backend renvoyant HTTP 2xx).
 
@@ -95,4 +97,4 @@ Puis dans chaque fichier HTML, remplacer les deux balises `<script src="https://
 <link rel="stylesheet" href="css/tailwind.min.css">
 ```
 
-(avec `/css/tailwind.min.css` dans `404.html` et `../css/tailwind.min.css` dans `games/modele-fiche-jeu.html`).
+(avec `/css/tailwind.min.css` dans `404.html` et `../css/tailwind.min.css` dans les fiches du dossier `games/`).

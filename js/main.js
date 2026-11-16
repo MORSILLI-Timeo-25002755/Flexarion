@@ -201,20 +201,24 @@
   function initPageTransitions() {
     var curtain = document.querySelector('.page-curtain');
     if (!curtain) return;
+    var leaving = false;
 
     // Retour arrière (bfcache) : s'assurer que le rideau est retiré.
     window.addEventListener('pageshow', function (e) {
-      if (e.persisted) {
-        root.classList.remove('pt-enter');
-        if (window.gsap) window.gsap.set(curtain, { scaleY: 0 });
-        else curtain.style.transform = 'scaleY(0)';
+      root.classList.remove('pt-leave');
+      var shouldAnimateEntry = e.persisted || root.classList.contains('pt-enter');
+      if (e.persisted) root.classList.add('pt-enter');
+      if (shouldAnimateEntry) {
+        window.setTimeout(function () { root.classList.remove('pt-enter'); }, 900);
       }
+      if (window.gsap) window.gsap.set(curtain, { scaleY: 0 });
+      else curtain.style.transform = 'scaleY(0)';
     });
 
     document.addEventListener('click', function (e) {
       if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
       var link = e.target.closest('a[href]');
-      if (!link || !window.gsap || reduceMotion.matches) return;
+      if (!link || reduceMotion.matches || leaving) return;
       if (link.target && link.target !== '_self') return;
       if (link.hasAttribute('download') || link.hasAttribute('data-no-transition')) return;
 
@@ -227,8 +231,15 @@
       if (url.pathname === window.location.pathname && url.hash) return;
 
       e.preventDefault();
+      leaving = true;
       try { sessionStorage.setItem('flx-pt', '1'); } catch (err) { /* navigation privée */ }
-      window.gsap.timeline({ onComplete: function () { window.location.href = url.href; } })
+      root.classList.add('pt-leave');
+      var navigate = function () { window.location.href = url.href; };
+      if (!window.gsap) {
+        window.setTimeout(navigate, 450);
+        return;
+      }
+      window.gsap.timeline({ onComplete: navigate })
         .set(curtain, { transformOrigin: 'bottom', scaleY: 0 })
         .to(curtain, { scaleY: 1, duration: 0.55, ease: 'expo.inOut' });
     });
