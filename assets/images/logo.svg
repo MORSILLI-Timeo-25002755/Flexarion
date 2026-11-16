@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" role="img" aria-labelledby="flx-logo-title">
+  <title id="flx-logo-title">Flexarion</title>
+  <!-- Monogramme : un « F » construit à partir d'un fût et de deux barres biseautées,
+       ponctué d'un « pixel » orange électrique (signature du studio). -->
+  <g>
+    <path fill="#F4F2ED" d="M14 12h38l-6 9H14z"/>
+    <path fill="#F4F2ED" d="M14 28h26l-6 9H14z"/>
+    <path fill="#F4F2ED" d="M14 12h9v40h-9z"/>
+    <path fill="#FF5A1F" d="M42 43h9v9h-9z"/>
+  </g>
+  <!-- Logotype (police : Space Grotesk, repli sans-serif) -->
+  <text x="74" y="44" fill="#F4F2ED" font-family="'Space Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="3">FLEXARION</text>
+</svg>

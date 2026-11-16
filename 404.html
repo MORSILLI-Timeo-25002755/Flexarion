@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(){var r=document.documentElement;r.classList.remove('no-js');r.classList.add('js');try{if(sessionStorage.getItem('flx-pt')){sessionStorage.removeItem('flx-pt');r.classList.add('pt-enter');}}catch(e){}window.__flxFailsafe=setTimeout(function(){r.classList.add('anim-fallback');},2500);})();
+  </script>
+
+  <title>Page introuvable (404) | Flexarion</title>
+  <meta name="description" content="La page demandée est introuvable sur le site du studio Flexarion. Retournez à l'accueil ou explorez nos pages principales.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#090909">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/tailwind.config.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="/js/config.js" defer></script>
+  <script src="/js/main.js" defer></script>
+  <script src="/js/animations.js" defer></script>
+</head>
+<body id="top">
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <div class="page-curtain" aria-hidden="true">
+    <span class="page-curtain__label">FLEXARION</span>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="container-flx header-inner">
+      <a href="/index.html" class="brand" aria-label="Flexarion — Retour à l'accueil">
+        <svg class="brand__mark" viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+          <path fill="#F4F2ED" d="M14 12h38l-6 9H14z"/>
+          <path fill="#F4F2ED" d="M14 28h26l-6 9H14z"/>
+          <path fill="#F4F2ED" d="M14 12h9v40h-9z"/>
+          <path fill="#FF5A1F" d="M42 43h9v9h-9z"/>
+        </svg>
+        <span>FLEXARION</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="main-nav__list">
+          <li><a href="/index.html" class="nav-link">Accueil</a></li>
+          <li><a href="/studio.html" class="nav-link">Le studio</a></li>
+          <li><a href="/games.html" class="nav-link">Nos jeux</a></li>
+          <li><a href="/faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="/contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="/contact.html" class="btn btn--small header-cta" data-magnetic>
+          <span>Parler d’un projet</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <div class="mobile-menu__bg" aria-hidden="true"></div>
+    <nav aria-label="Navigation mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="/index.html" class="mobile-menu__link" data-menu-item><span class="mono">01</span><span>Accueil</span></a></li>
+        <li><a href="/studio.html" class="mobile-menu__link" data-menu-item><span class="mono">02</span><span>Le studio</span></a></li>
+        <li><a href="/games.html" class="mobile-menu__link" data-menu-item><span class="mono">03</span><span>Nos jeux</span></a></li>
+        <li><a href="/faq.html" class="mobile-menu__link" data-menu-item><span class="mono">04</span><span>FAQ</span></a></li>
+        <li><a href="/credits.html" class="mobile-menu__link" data-menu-item><span class="mono">05</span><span>Crédits</span></a></li>
+        <li><a href="/contact.html" class="mobile-menu__link" data-menu-item><span class="mono">06</span><span>Contact</span></a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div>
+        <p class="mono text-muted">Studio indépendant · Aix-en-Provence</p>
+        <a href="mailto:contact@flexarion.example" class="contact-email mt-2" data-email-link data-email-text>contact@flexarion.example</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="error-page" data-hero aria-labelledby="error-title">
+      <span class="error-code" aria-hidden="true">404</span>
+
+      <div class="container-flx">
+        <span class="eyebrow">Erreur 404 — Hors carte</span>
+        <h1 id="error-title" class="page-hero__title mt-6">
+          <span class="page-hero__kicker">Ce monde n’existe pas encore</span>
+          <span class="page-hero__display">
+            <span class="split-word"><span>PAGE</span></span>
+            <span class="split-word"><span class="text-ember">INTROUVABLE</span></span>
+          </span>
+        </h1>
+
+        <p class="lead mt-8" data-hero-fade>
+          L’adresse demandée est introuvable, a été déplacée ou n’existe plus sur le site officiel de Flexarion.
+        </p>
+
+        <div class="mt-10 flex flex-wrap gap-4" data-hero-fade>
+          <a href="/index.html" class="btn btn--primary" data-magnetic>
+            <span>Retourner à l’accueil</span>
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="/games.html" class="btn" data-magnetic>
+            <span>Explorer nos jeux</span>
+          </a>
+        </div>
+
+        <nav class="mt-14 pt-8 border-t border-white/10" aria-label="Liens utiles depuis la page d'erreur" data-hero-fade>
+          <p class="mono text-muted mb-4">Pages principales du studio</p>
+          <ul class="flex flex-wrap gap-x-8 gap-y-3 font-display">
+            <li><a href="/studio.html" class="link-arrow">Le studio</a></li>
+            <li><a href="/games.html" class="link-arrow">Nos jeux</a></li>
+            <li><a href="/faq.html" class="link-arrow">FAQ</a></li>
+            <li><a href="/credits.html" class="link-arrow">Crédits</a></li>
+            <li><a href="/contact.html" class="link-arrow">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container-flx">
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Flexarion — Studio indépendant de jeux vidéo à Aix-en-Provence.</p>
+        <a href="/index.html" class="back-to-top">Retour à l’accueil →</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

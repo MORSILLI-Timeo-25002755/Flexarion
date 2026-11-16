@@ -1,0 +1,7 @@
+/*
+ * Point d'entrée Tailwind pour une compilation de production (optionnelle).
+ * Voir tailwind.config.js et README.md — section « Passage en production ».
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

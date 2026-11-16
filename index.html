@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fr" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(){var r=document.documentElement;r.classList.remove('no-js');r.classList.add('js');try{if(sessionStorage.getItem('flx-pt')){sessionStorage.removeItem('flx-pt');r.classList.add('pt-enter');}}catch(e){}window.__flxFailsafe=setTimeout(function(){r.classList.add('anim-fallback');},2500);})();
+  </script>
+
+  <title>Flexarion | Studio de jeux vidéo indépendant à Aix-en-Provence</title>
+  <meta name="description" content="Découvrez Flexarion, studio indépendant de création et développement de jeux vidéo basé à Aix-en-Provence. Explorez notre univers, notre équipe et nos projets.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#090909">
+  <link rel="canonical" href="https://www.flexarion.example/">
+
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="Flexarion">
+  <meta property="og:title" content="Flexarion | Studio de jeux vidéo indépendant à Aix-en-Provence">
+  <meta property="og:description" content="Découvrez Flexarion, studio indépendant de création et développement de jeux vidéo basé à Aix-en-Provence. Explorez notre univers, notre équipe et nos projets.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.flexarion.example/">
+  <meta property="og:image" content="https://www.flexarion.example/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Flexarion — We Create Worlds. Studio de jeux vidéo indépendant à Aix-en-Provence, France.">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Flexarion | Studio de jeux vidéo indépendant à Aix-en-Provence">
+  <meta name="twitter:description" content="Découvrez Flexarion, studio indépendant de création et développement de jeux vidéo basé à Aix-en-Provence.">
+  <meta name="twitter:image" content="https://www.flexarion.example/assets/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Flexarion — We Create Worlds. Studio de jeux vidéo indépendant à Aix-en-Provence.">
+
+  <!-- Icônes & Manifest -->
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <!-- Polices Google Fonts (font-display: swap) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+
+  <!-- Préchargement du visuel LCP (hero) -->
+  <link rel="preload" as="image" href="assets/images/hero.webp" imagesrcset="assets/images/hero-960.webp 960w, assets/images/hero.webp 1920w" imagesizes="100vw" fetchpriority="high">
+
+  <!-- Styles : Tailwind CDN + Configuration compatible production + CSS modulaire -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Données structurées Schema.org (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.flexarion.example/#organization",
+        "name": "Flexarion",
+        "url": "https://www.flexarion.example/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.flexarion.example/assets/images/logo.png",
+          "width": 512,
+          "height": 512
+        },
+        "description": "Studio indépendant de développement et de création de jeux vidéo basé à Aix-en-Provence, en Provence-Alpes-Côte d'Azur, France.",
+        "email": "contact@flexarion.example",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Aix-en-Provence",
+          "addressRegion": "Provence-Alpes-Côte d'Azur",
+          "addressCountry": "FR"
+        },
+        "founder": [
+          { "@type": "Person", "name": "Timéo Morsilli" },
+          { "@type": "Person", "name": "Hugo Banti" },
+          { "@type": "Person", "name": "Enrique Ruiz" }
+        ],
+        "sameAs": []
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.flexarion.example/#website",
+        "url": "https://www.flexarion.example/",
+        "name": "Flexarion",
+        "inLanguage": "fr-FR",
+        "publisher": { "@id": "https://www.flexarion.example/#organization" }
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.flexarion.example/#webpage",
+        "url": "https://www.flexarion.example/",
+        "name": "Flexarion | Studio de jeux vidéo indépendant à Aix-en-Provence",
+        "description": "Découvrez Flexarion, studio indépendant de création et développement de jeux vidéo basé à Aix-en-Provence. Explorez notre univers, notre équipe et nos projets.",
+        "isPartOf": { "@id": "https://www.flexarion.example/#website" },
+        "about": { "@id": "https://www.flexarion.example/#organization" },
+        "inLanguage": "fr-FR"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Scripts différés (GSAP + ScrollTrigger via CDN + modules Flexarion) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+  <script src="js/config.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/animations.js" defer></script>
+</head>
+<body id="top">
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <!-- Rideau de transition entre pages -->
+  <div class="page-curtain" aria-hidden="true">
+    <span class="page-curtain__label">FLEXARION</span>
+  </div>
+
+  <!-- En-tête & Navigation principale -->
+  <header class="site-header" data-header>
+    <div class="container-flx header-inner">
+      <a href="index.html" class="brand" aria-label="Flexarion — Retour à l'accueil">
+        <svg class="brand__mark" viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+          <path fill="#F4F2ED" d="M14 12h38l-6 9H14z"/>
+          <path fill="#F4F2ED" d="M14 28h26l-6 9H14z"/>
+          <path fill="#F4F2ED" d="M14 12h9v40h-9z"/>
+          <path fill="#FF5A1F" d="M42 43h9v9h-9z"/>
+        </svg>
+        <span>FLEXARION</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="main-nav__list">
+          <li><a href="index.html" class="nav-link" aria-current="page">Accueil</a></li>
+          <li><a href="studio.html" class="nav-link">Le studio</a></li>
+          <li><a href="games.html" class="nav-link">Nos jeux</a></li>
+          <li><a href="faq.html" class="nav-link">FAQ</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="btn btn--small header-cta" data-magnetic>
+          <span>Parler d’un projet</span>
+          <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+          <span class="menu-toggle__bar" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Menu mobile plein écran -->
+  <div id="mobile-menu" class="mobile-menu" hidden>
+    <div class="mobile-menu__bg" aria-hidden="true"></div>
+    <nav aria-label="Navigation mobile">
+      <ul class="mobile-menu__list">
+        <li><a href="index.html" class="mobile-menu__link" data-menu-item aria-current="page"><span class="mono">01</span><span>Accueil</span></a></li>
+        <li><a href="studio.html" class="mobile-menu__link" data-menu-item><span class="mono">02</span><span>Le studio</span></a></li>
+        <li><a href="games.html" class="mobile-menu__link" data-menu-item><span class="mono">03</span><span>Nos jeux</span></a></li>
+        <li><a href="faq.html" class="mobile-menu__link" data-menu-item><span class="mono">04</span><span>FAQ</span></a></li>
+        <li><a href="credits.html" class="mobile-menu__link" data-menu-item><span class="mono">05</span><span>Crédits</span></a></li>
+        <li><a href="contact.html" class="mobile-menu__link" data-menu-item><span class="mono">06</span><span>Contact</span></a></li>
+      </ul>
+    </nav>
+    <div class="mobile-menu__footer">
+      <div>
+        <p class="mono text-muted">Studio indépendant · Aix-en-Provence</p>
+        <a href="mailto:contact@flexarion.example" class="contact-email mt-2" data-email-link data-email-text>contact@flexarion.example</a>
+      </div>
+      <div class="social-list">
+        <a class="social-link" data-social="instagram" aria-label="Instagram de Flexarion — bientôt disponible">Instagram <span class="social-link__soon">Bientôt</span></a>
+        <a class="social-link" data-social="tiktok" aria-label="TikTok de Flexarion — bientôt disponible">TikTok <span class="social-link__soon">Bientôt</span></a>
+        <a class="social-link" data-social="youtube" aria-label="YouTube de Flexarion — bientôt disponible">YouTube <span class="social-link__soon">Bientôt</span></a>
+        <a class="social-link" data-social="discord" aria-label="Discord de Flexarion — bientôt disponible">Discord <span class="social-link__soon">Bientôt</span></a>
+        <a class="social-link" data-social="x" aria-label="X de Flexarion — bientôt disponible">X <span class="social-link__soon">Bientôt</span></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenu principal -->
+  <main id="main-content">
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" data-hero aria-labelledby="hero-title">
+      <div class="hero__media">
+        <img
+          src="assets/images/hero.webp"
+          srcset="assets/images/hero-960.webp 960w, assets/images/hero.webp 1920w"
+          sizes="100vw"
+          width="1920"
+          height="1200"
+          fetchpriority="high"
+          decoding="async"
+          alt="Univers abstrait et futuriste évoquant la création de mondes vidéoludiques par le studio Flexarion"
+          data-hero-media>
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container-flx">
+        <p class="hero__kicker" data-hero-fade>Studio indépendant de jeux vidéo — Aix-en-Provence, France</p>
+
+        <h1 id="hero-title" class="display hero__title">
+          <span class="split-word"><span>WE</span></span>
+          <span class="split-word"><span>CREATE</span></span>
+          <br>
+          <span class="split-word"><span class="text-ember">WORLDS.</span></span>
+        </h1>
+
+        <div class="mt-8 grid gap-8 lg:grid-cols-12 lg:items-end">
+          <p class="hero__subtitle lg:col-span-6" data-hero-fade>
+            Independent game studio based in Aix-en-Provence, France.
+          </p>
+          <div class="hero__actions flex flex-wrap gap-4 lg:col-span-6 lg:justify-end" data-hero-fade>
+            <a href="studio.html" class="btn btn--primary" data-magnetic>
+              <span>Découvrir le studio</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+            <a href="games.html" class="btn" data-magnetic>
+              <span>Explorer nos jeux</span>
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__meta" data-hero-fade>
+          <div class="flex flex-wrap gap-x-8 gap-y-2 mono">
+            <span>43.5297° N, 5.4474° E · Provence-Alpes-Côte d’Azur</span>
+            <span>Création &amp; Développement Vidéoludique</span>
+          </div>
+          <a href="#presentation" class="scroll-indicator mono" aria-label="Faire défiler vers la présentation du studio">
+            <span class="scroll-indicator__line" aria-hidden="true"></span>
+            <span>Défiler</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bandeau typographique -->
+    <div class="marquee" data-marquee aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>Indie Game Studio</span><span class="marquee__star">✦</span>
+          <span class="text-outline">Aix-en-Provence</span><span class="marquee__star">✦</span>
+          <span>Création d’univers</span><span class="marquee__star">✦</span>
+          <span class="text-outline">Game Development</span><span class="marquee__star">✦</span>
+        </div>
+        <div class="marquee__group">
+          <span>Indie Game Studio</span><span class="marquee__star">✦</span>
+          <span class="text-outline">Aix-en-Provence</span><span class="marquee__star">✦</span>
+          <span>Création d’univers</span><span class="marquee__star">✦</span>
+          <span class="text-outline">Game Development</span><span class="marquee__star">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== PRÉSENTATION DU STUDIO ==================== -->
+    <section id="presentation" class="section" aria-labelledby="intro-heading">
+      <div class="container-flx">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">01 / Le studio</span>
+            <h2 id="intro-heading" class="h-section mt-4" data-split>
+              Un studio indépendant tourné vers l’exigence créative
+            </h2>
+          </div>
+          <div class="prose-flx" data-reveal>
+            <p class="lead">
+              Flexarion est un studio indépendant de développement de jeux vidéo basé à Aix-en-Provence, en Provence-Alpes-Côte d’Azur. Nous imaginons et concevons des expériences vidéoludiques où créativité, technologie et passion se rencontrent.
+            </p>
+            <p>
+              Né de la volonté de bâtir des mondes singuliers en toute liberté éditoriale, notre studio réunit conception ludique, direction artistique et ingénierie logicielle pour façonner des jeux indépendants mémorables en France et à l’international.
+            </p>
+            <p class="mt-6">
+              <a href="studio.html" class="link-arrow">
+                <span>Découvrir la vision et l’approche du studio Flexarion</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3" data-reveal-stagger>
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">01 — INDÉPENDANCE</span>
+            <h3 class="h-sub pillar__title">Liberté de création</h3>
+            <p>Une structure indépendante qui place l’intention artistique, la cohérence d’univers et la qualité de jeu avant les compromis standardisés.</p>
+          </article>
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">02 — SAVOIR-FAIRE</span>
+            <h3 class="h-sub pillar__title">Maîtrise technique &amp; artistique</h3>
+            <p>Du prototypage des mécaniques jusqu’à la mise en scène sonore et visuelle, chaque couche du développement vidéoludique est pensée sur mesure.</p>
+          </article>
+          <article class="pillar" data-reveal>
+            <span class="pillar__num">03 — AMBITION</span>
+            <h3 class="h-sub pillar__title">Ancrage local, portée globale</h3>
+            <p>Enraciné à Aix-en-Provence au cœur de la scène créative du Sud de la France, avec l’ambition de proposer nos créations aux joueurs du monde entier.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- ==================== NOS CRÉATIONS ==================== -->
+    <section class="section" aria-labelledby="games-heading">
+      <div class="container-flx">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">02 / Nos créations</span>
+            <h2 id="games-heading" class="h-section mt-4" data-split>
+              Projets &amp; univers en chantier
+            </h2>
+          </div>
+          <div class="prose-flx" data-reveal>
+            <p>
+              Les projets du studio sont actuellement en phase de conception et de développement interne. Les emplacements ci-dessous accueilleront les fiches officielles de nos jeux vidéo dès leur annonce publique.
+            </p>
+            <p class="mt-5">
+              <a href="games.html" class="link-arrow">
+                <span>Accéder à la galerie complète des projets</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="game-grid game-grid--featured" data-reveal-stagger>
+          <!-- Carte 01 -->
+          <article class="game-card" data-reveal>
+            <div class="game-card__media">
+              <img
+                src="assets/images/games/projet-01.webp"
+                width="800"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+                alt="Visuel conceptuel d'attente pour le premier projet de jeu vidéo du studio Flexarion">
+              <div class="game-card__badges">
+                <span class="tag">FLX-01</span>
+                <span class="status status--dev">En développement</span>
+              </div>
+            </div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Projet #01 — <span class="ph">Titre à annoncer</span></h3>
+              <p class="game-card__desc">
+                <span class="ph">Emplacement réservé</span> — Premier univers vidéoludique imaginé par le studio. Les détails officiels seront révélés prochainement.
+              </p>
+              <dl class="game-card__facts">
+                <dt>Genre</dt>
+                <dd><span class="ph">À préciser</span></dd>
+                <dt>Statut</dt>
+                <dd>En développement</dd>
+              </dl>
+              <div class="game-card__footer">
+                <a href="games.html#projet-01" class="link-arrow">
+                  <span>Voir la fiche d’aperçu FLX-01</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte 02 -->
+          <article class="game-card" data-reveal>
+            <div class="game-card__media">
+              <img
+                src="assets/images/games/projet-02.webp"
+                width="800"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+                alt="Visuel conceptuel d'attente pour le deuxième projet de jeu vidéo Flexarion">
+              <div class="game-card__badges">
+                <span class="tag">FLX-02</span>
+                <span class="status status--soon">À venir</span>
+              </div>
+            </div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Projet #02 — <span class="ph">Titre à annoncer</span></h3>
+              <p class="game-card__desc">
+                <span class="ph">Emplacement réservé</span> — Piste d’exploration créative et mécanique en cours de prototypage au sein du studio.
+              </p>
+              <dl class="game-card__facts">
+                <dt>Genre</dt>
+                <dd><span class="ph">À préciser</span></dd>
+                <dt>Statut</dt>
+                <dd>À venir</dd>
+              </dl>
+              <div class="game-card__footer">
+                <a href="games.html#projet-02" class="link-arrow">
+                  <span>Voir la fiche d’aperçu FLX-02</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Carte 03 -->
+          <article class="game-card" data-reveal>
+            <div class="game-card__media">
+              <img
+                src="assets/images/games/projet-03.webp"
+                width="800"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+                alt="Visuel conceptuel d'attente pour le troisième projet de jeu vidéo Flexarion">
+              <div class="game-card__badges">
+                <span class="tag">FLX-03</span>
+                <span class="status status--soon">À venir</span>
+              </div>
+            </div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Projet #03 — <span class="ph">Titre à annoncer</span></h3>
+              <p class="game-card__desc">
+                <span class="ph">Emplacement réservé</span> — Concept narratif et direction visuelle en phase d’étude pour les futures créations Flexarion.
+              </p>
+              <dl class="game-card__facts">
+                <dt>Genre</dt>
+                <dd><span class="ph">À préciser</span></dd>
+                <dt>Statut</dt>
+                <dd>À venir</dd>
+              </dl>
+              <div class="game-card__footer">
+                <a href="games.html#projet-03" class="link-arrow">
+                  <span>Voir la fiche d’aperçu FLX-03</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MANIFESTE ==================== -->
+    <section class="section section--coal manifesto" aria-labelledby="manifesto-heading">
+      <div class="container-flx">
+        <span class="eyebrow">03 / Manifeste</span>
+        <h2 id="manifesto-heading" class="h-section manifesto__title mt-5" data-split>
+          MORE THAN GAMES. <span class="text-ember">EXPERIENCES.</span>
+        </h2>
+
+        <div class="mt-12 grid gap-12 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-7">
+            <p class="manifesto__text" data-scrub-words>
+              Nous croyons au jeu vidéo comme un art total : un dialogue permanent entre code, lumière, son et interaction. Chaque monde que nous façonnons à Aix-en-Provence cherche à provoquer une émotion durable, une curiosité intacte et le plaisir brut de la découverte.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-6" data-reveal>
+              <a href="studio.html#philosophie" class="link-arrow">
+                <span>Lire notre manifeste créatif</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+              <a href="faq.html" class="link-arrow">
+                <span>Consulter la FAQ du studio</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5">
+            <figure class="media-frame aspect-[4/3]" data-mask-reveal>
+              <img
+                src="assets/images/studio-aix.webp"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Interprétation graphique de la montagne Sainte-Victoire à Aix-en-Provence dans l'esthétique sombre de Flexarion"
+                data-parallax="0.1">
+              <figcaption class="media-frame__caption tag">Aix-en-Provence · Provence-Alpes-Côte d’Azur</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ÉQUIPE ==================== -->
+    <section class="section" aria-labelledby="team-heading">
+      <div class="container-flx">
+        <div class="section-head section-head--split">
+          <div>
+            <span class="eyebrow">04 / L’équipe</span>
+            <h2 id="team-heading" class="h-section mt-4" data-split>
+              Les visages de Flexarion
+            </h2>
+          </div>
+          <div class="prose-flx" data-reveal>
+            <p>
+              Trois esprits complémentaires réunis autour d’une même passion pour le développement de jeux indépendants.
+            </p>
+            <p class="mt-4">
+              <a href="credits.html" class="link-arrow">
+                <span>Voir la page complète des crédits</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="team-grid team-grid--offset" data-reveal-stagger>
+          <article class="team-card" data-reveal>
+            <div class="team-card__portrait">
+              <span class="tag team-card__index">01</span>
+              <img
+                src="assets/images/team/timeo-morsilli.webp"
+                width="720"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Portrait provisoire de Timéo Morsilli, membre du studio Flexarion">
+              <div class="team-card__hover">
+                <span class="mono">Flexarion</span>
+                <span class="mono text-ember">Aix-en-Provence</span>
+              </div>
+            </div>
+            <h3 class="team-card__name">Timéo Morsilli</h3>
+            <p class="team-card__role mono"><span class="ph" data-bind="team.timeo.role">Rôle à compléter</span></p>
+          </article>
+
+          <article class="team-card" data-reveal>
+            <div class="team-card__portrait">
+              <span class="tag team-card__index">02</span>
+              <img
+                src="assets/images/team/hugo-banti.webp"
+                width="720"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Portrait provisoire de Hugo Banti, membre du studio Flexarion">
+              <div class="team-card__hover">
+                <span class="mono">Flexarion</span>
+                <span class="mono text-ember">Aix-en-Provence</span>
+              </div>
+            </div>
+            <h3 class="team-card__name">Hugo Banti</h3>
+            <p class="team-card__role mono"><span class="ph" data-bind="team.hugo.role">Rôle à compléter</span></p>
+          </article>
+
+          <article class="team-card" data-reveal>
+            <div class="team-card__portrait">
+              <span class="tag team-card__index">03</span>
+              <img
+                src="assets/images/team/enrique-ruiz.webp"
+                width="720"
+                height="900"
+                loading="lazy"
+                decoding="async"
+                alt="Portrait provisoire d'Enrique Ruiz, membre du studio Flexarion">
+              <div class="team-card__hover">
+                <span class="mono">Flexarion</span>
+                <span class="mono text-ember">Aix-en-Provence</span>
+              </div>
+            </div>
+            <h3 class="team-card__name">Enrique Ruiz</h3>
+            <p class="team-card__role mono"><span class="ph" data-bind="team.enrique.role">Rôle à compléter</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- ==================== CTA FINAL ==================== -->
+    <section class="section cta-block" aria-labelledby="cta-heading">
+      <div class="container-flx text-center">
+        <span class="eyebrow">05 / Collaboration &amp; Contact</span>
+        <h2 id="cta-heading" class="cta-block__title mt-6" data-split>
+          LET’S CREATE SOMETHING <span class="text-ember">UNFORGETTABLE.</span>
+        </h2>
+        <p class="lead mx-auto mt-6" data-reveal>
+          Une question sur nos projets, une proposition de partenariat ou simplement l’envie d’échanger avec un studio de jeux vidéo indépendant à Aix-en-Provence ?
+        </p>
+        <div class="mt-10 flex flex-wrap justify-center gap-4" data-reveal>
+          <a href="contact.html" class="btn btn--primary" data-magnetic>
+            <span>Contacter Flexarion</span>
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+          <a href="credits.html" class="btn" data-magnetic>
+            <span>Rencontrer l’équipe</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== PIED DE PAGE ==================== -->
+  <footer class="site-footer">
+    <div class="container-flx">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="brand" aria-label="Flexarion — Accueil">
+            <svg class="brand__mark" viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
+              <path fill="#F4F2ED" d="M14 12h38l-6 9H14z"/>
+              <path fill="#F4F2ED" d="M14 28h26l-6 9H14z"/>
+              <path fill="#F4F2ED" d="M14 12h9v40h-9z"/>
+              <path fill="#FF5A1F" d="M42 43h9v9h-9z"/>
+            </svg>
+            <span>FLEXARION</span>
+          </a>
+          <p class="mt-4 text-muted max-w-xs">
+            Studio indépendant de développement et création de jeux vidéo basé à Aix-en-Provence, Provence-Alpes-Côte d’Azur, France.
+          </p>
+          <div class="social-list mt-6" aria-label="Réseaux sociaux de Flexarion">
+            <a class="social-link" data-social="instagram" aria-label="Instagram de Flexarion — bientôt disponible">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              <span class="sr-only">Instagram</span><span class="social-link__soon">Bientôt</span>
+            </a>
+            <a class="social-link" data-social="tiktok" aria-label="TikTok de Flexarion — bientôt disponible">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3v11.5a4.5 4.5 0 1 1-3.5-4.38"/><path d="M14 6.5c1.5 2 3.5 3 6 3"/></svg>
+              <span class="sr-only">TikTok</span><span class="social-link__soon">Bientôt</span>
+            </a>
+            <a class="social-link" data-social="youtube" aria-label="YouTube de Flexarion — bientôt disponible">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg>
+              <span class="sr-only">YouTube</span><span class="social-link__soon">Bientôt</span>
+            </a>
+            <a class="social-link" data-social="discord" aria-label="Discord de Flexarion — bientôt disponible">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7.5 7.5a12 12 0 0 1 9 0l1.5 8a10 10 0 0 1-4.5 1.5l-1-1.5m-1 0-1 1.5A10 10 0 0 1 6 15.5l1.5-8Z"/><circle cx="9.5" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+              <span class="sr-only">Discord</span><span class="social-link__soon">Bientôt</span>
+            </a>
+            <a class="social-link" data-social="x" aria-label="X de Flexarion — bientôt disponible">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg>
+              <span class="sr-only">X</span><span class="social-link__soon">Bientôt</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer-title">Navigation</h2>
+          <ul class="footer-links">
+            <li><a href="index.html" aria-current="page">Accueil</a></li>
+            <li><a href="studio.html">Le studio</a></li>
+            <li><a href="games.html">Nos jeux</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="credits.html">Crédits</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-title">Informations</h2>
+          <ul class="footer-links">
+            <li><a href="legal.html">Mentions légales</a></li>
+            <li><a href="privacy.html">Politique de confidentialité</a></li>
+            <li><a href="sitemap.xml">Plan du site (XML)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-title">Localisation &amp; Contact</h2>
+          <address class="footer-address">
+            <p>Aix-en-Provence</p>
+            <p>Provence-Alpes-Côte d’Azur, France</p>
+            <p class="mt-3">
+              <a href="mailto:contact@flexarion.example" class="underline decoration-ember underline-offset-4 hover:text-ember" data-email-link data-email-text>contact@flexarion.example</a>
+            </p>
+          </address>
+        </div>
+      </div>
+
+      <span class="footer-wordmark" aria-hidden="true">FLEXARION</span>
+
+      <div class="footer-bottom">
+        <p>© <span data-year>2026</span> Flexarion — Studio indépendant de jeux vidéo à Aix-en-Provence. Tous droits réservés.</p>
+        <a href="#top" class="back-to-top">
+          <span>Haut de page</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
