@@ -18,6 +18,7 @@
 
   var CONFIG = window.FLEXARION_CONFIG || {};
   var root = document.documentElement;
+  var isEn = (root.lang || '').toLowerCase().indexOf('en') === 0;
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   /* ------------------------------------------------------------------------
@@ -48,13 +49,15 @@
         el.setAttribute('href', network.url);
         el.setAttribute('target', '_blank');
         el.setAttribute('rel', 'noopener me');
-        el.setAttribute('aria-label', network.label + ' de Flexarion (nouvel onglet)');
+        el.setAttribute('aria-label', isEn
+          ? 'Flexarion on ' + network.label + ' (new tab)'
+          : network.label + ' de Flexarion (nouvel onglet)');
         el.removeAttribute('title');
       } else {
         // Pas de compte officiel : lien neutralisé (un <a> sans href n'est ni
         // cliquable ni focalisable), libellé explicite pour les lecteurs d'écran.
         el.removeAttribute('href');
-        el.setAttribute('title', 'Compte officiel bientôt disponible');
+        el.setAttribute('title', isEn ? 'Official account coming soon' : 'Compte officiel bientôt disponible');
       }
     });
   }
@@ -124,7 +127,7 @@
       menu.hidden = false;
       root.classList.add('menu-open');
       toggle.setAttribute('aria-expanded', 'true');
-      toggle.setAttribute('aria-label', 'Fermer le menu');
+      toggle.setAttribute('aria-label', isEn ? 'Close menu' : 'Fermer le menu');
       if (canAnimate()) {
         if (tl) tl.kill();
         tl = window.gsap.timeline();
@@ -140,7 +143,7 @@
       if (!isOpen) return;
       isOpen = false;
       toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Ouvrir le menu');
+      toggle.setAttribute('aria-label', isEn ? 'Open menu' : 'Ouvrir le menu');
       var finish = function () {
         menu.hidden = true;
         root.classList.remove('menu-open');
@@ -203,13 +206,14 @@
     if (!curtain) return;
     var leaving = false;
 
-    // Retour arrière (bfcache) : s'assurer que le rideau est retiré.
+    // Retour arrière (bfcache) et nettoyage à l'entrée.
     window.addEventListener('pageshow', function (e) {
+      leaving = false;
       root.classList.remove('pt-leave');
       var shouldAnimateEntry = e.persisted || root.classList.contains('pt-enter');
       if (e.persisted) root.classList.add('pt-enter');
       if (shouldAnimateEntry) {
-        window.setTimeout(function () { root.classList.remove('pt-enter'); }, 900);
+        window.setTimeout(function () { root.classList.remove('pt-enter'); }, 600);
       }
       if (window.gsap) window.gsap.set(curtain, { scaleY: 0 });
       else curtain.style.transform = 'scaleY(0)';
@@ -236,17 +240,54 @@
       root.classList.add('pt-leave');
       var navigate = function () { window.location.href = url.href; };
       if (!window.gsap) {
-        window.setTimeout(navigate, 450);
+        window.setTimeout(navigate, 320);
         return;
       }
       window.gsap.timeline({ onComplete: navigate })
         .set(curtain, { transformOrigin: 'bottom', scaleY: 0 })
-        .to(curtain, { scaleY: 1, duration: 0.55, ease: 'expo.inOut' });
+        .to(curtain, { scaleY: 1, duration: 0.32, ease: 'expo.inOut' });
     });
   }
 
   /* ------------------------------------------------------------------------
-   * 5. DIVERS
+   * 5. PRÉCHARGEMENT AU SURVOL DES LIENS INTERNES
+   * --------------------------------------------------------------------- */
+  function initLinkPrefetch() {
+    var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+    if (conn && (conn.saveData || /2g/.test(conn.effectiveType || ''))) return;
+    var prefetched = Object.create(null);
+
+    function prefetch(link) {
+      if (!link || link.target && link.target !== '_self') return;
+      if (link.hasAttribute('download')) return;
+      var href = link.getAttribute('href');
+      if (!href || href.charAt(0) === '#' || /^(mailto|tel|javascript):/i.test(href)) return;
+      var url;
+      try { url = new URL(link.href, window.location.href); } catch (e) { return; }
+      if (url.origin !== window.location.origin) return;
+      if (url.pathname === window.location.pathname) return;
+      if (!/\.html$/i.test(url.pathname) && url.pathname.slice(-1) !== '/') return;
+      if (prefetched[url.href]) return;
+      prefetched[url.href] = true;
+      var hint = document.createElement('link');
+      hint.rel = 'prefetch';
+      hint.as = 'document';
+      hint.href = url.href;
+      document.head.appendChild(hint);
+    }
+
+    document.addEventListener('pointerenter', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (a) prefetch(a);
+    }, true);
+    document.addEventListener('focusin', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+      if (a) prefetch(a);
+    });
+  }
+
+  /* ------------------------------------------------------------------------
+   * 6. DIVERS
    * --------------------------------------------------------------------- */
   function initYear() {
     var year = String(new Date().getFullYear());
@@ -263,6 +304,7 @@
     initHeader();
     initMobileMenu();
     initPageTransitions();
+    initLinkPrefetch();
     initYear();
   }
 

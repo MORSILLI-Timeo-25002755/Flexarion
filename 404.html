@@ -12,19 +12,25 @@
   <meta name="robots" content="noindex, nofollow">
   <meta name="theme-color" content="#090909">
 
+
+  <!-- Icônes & Manifest -->
   <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="Flexarion Devlog (RSS)" href="https://flexarion.timeoms.fr/feed.xml">
 
+  <!-- Polices Google Fonts (font-display: swap) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
 
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="/tailwind.config.js"></script>
+  <!-- Styles compilés (sans runtime Tailwind CDN) -->
+  <link rel="stylesheet" href="/css/tailwind.min.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/responsive.css">
 
+  <!-- Scripts différés (GSAP + ScrollTrigger via CDN + modules Flexarion) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
   <script src="/js/config.js" defer></script>
@@ -34,10 +40,12 @@
 <body id="top">
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
+  <!-- Rideau de transition entre pages -->
   <div class="page-curtain" aria-hidden="true">
     <span class="page-curtain__label">FLEXARION</span>
   </div>
 
+  <!-- En-tête & Navigation principale -->
   <header class="site-header" data-header>
     <div class="container-flx header-inner">
       <a href="/index.html" class="brand" aria-label="Flexarion — Retour à l'accueil">
@@ -55,12 +63,18 @@
           <li><a href="/index.html" class="nav-link">Accueil</a></li>
           <li><a href="/studio.html" class="nav-link">Le studio</a></li>
           <li><a href="/games.html" class="nav-link">Nos jeux</a></li>
+          <li><a href="/devlog.html" class="nav-link">Devlog</a></li>
           <li><a href="/faq.html" class="nav-link">FAQ</a></li>
           <li><a href="/contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
       <div class="flex items-center gap-3">
+        <a href="/en/index.html" class="lang-switch lang-switch--to-en" hreflang="en" aria-label="Passer le site en anglais (English)" title="Passer le site en anglais (English)">
+          <span class="lang-switch__current" aria-hidden="true">FR</span>
+          <svg class="lang-switch__arrow" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5"/></svg>
+          <span class="lang-switch__target" aria-hidden="true">EN</span>
+        </a>
         <a href="/contact.html" class="btn btn--small header-cta" data-magnetic>
           <span>Parler d’un projet</span>
           <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -73,6 +87,7 @@
     </div>
   </header>
 
+  <!-- Menu mobile plein écran -->
   <div id="mobile-menu" class="mobile-menu" hidden>
     <div class="mobile-menu__bg" aria-hidden="true"></div>
     <nav aria-label="Navigation mobile">
@@ -80,15 +95,31 @@
         <li><a href="/index.html" class="mobile-menu__link" data-menu-item><span class="mono">01</span><span>Accueil</span></a></li>
         <li><a href="/studio.html" class="mobile-menu__link" data-menu-item><span class="mono">02</span><span>Le studio</span></a></li>
         <li><a href="/games.html" class="mobile-menu__link" data-menu-item><span class="mono">03</span><span>Nos jeux</span></a></li>
-        <li><a href="/faq.html" class="mobile-menu__link" data-menu-item><span class="mono">04</span><span>FAQ</span></a></li>
-        <li><a href="/credits.html" class="mobile-menu__link" data-menu-item><span class="mono">05</span><span>Crédits</span></a></li>
-        <li><a href="/contact.html" class="mobile-menu__link" data-menu-item><span class="mono">06</span><span>Contact</span></a></li>
+        <li><a href="/devlog.html" class="mobile-menu__link" data-menu-item><span class="mono">04</span><span>Devlog</span></a></li>
+        <li><a href="/faq.html" class="mobile-menu__link" data-menu-item><span class="mono">05</span><span>FAQ</span></a></li>
+        <li><a href="/credits.html" class="mobile-menu__link" data-menu-item><span class="mono">06</span><span>Crédits</span></a></li>
+        <li><a href="/press.html" class="mobile-menu__link" data-menu-item><span class="mono">07</span><span>Press Kit</span></a></li>
+        <li><a href="/contact.html" class="mobile-menu__link" data-menu-item><span class="mono">08</span><span>Contact</span></a></li>
       </ul>
     </nav>
     <div class="mobile-menu__footer">
-      <div>
-        <p class="mono text-muted">Studio indépendant · Aix-en-Provence</p>
-        <a href="mailto:contact@flexarion.timeoms.fr" class="contact-email mt-2" data-email-link data-email-text>contact@flexarion.timeoms.fr</a>
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p class="mono text-muted">Studio indépendant · Aix-en-Provence</p>
+          <a href="mailto:contact@flexarion.timeoms.fr" class="contact-email mt-2" data-email-link data-email-text>contact@flexarion.timeoms.fr</a>
+        </div>
+        <a href="/en/index.html" class="lang-switch lang-switch--to-en" hreflang="en" aria-label="Passer le site en anglais (English)" title="Passer le site en anglais (English)">
+          <span class="lang-switch__current" aria-hidden="true">FR</span>
+          <svg class="lang-switch__arrow" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5"/></svg>
+          <span class="lang-switch__target" aria-hidden="true">EN</span>
+        </a>
+      </div>
+      <div class="social-list">
+        <a class="social-link" data-social="instagram" aria-label="Instagram — bientôt disponible">Instagram <span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="tiktok" aria-label="TikTok — bientôt disponible">TikTok <span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="youtube" aria-label="YouTube — bientôt disponible">YouTube <span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="discord" aria-label="Discord — bientôt disponible">Discord <span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="x" aria-label="X — bientôt disponible">X <span class="social-link__soon">Bientôt</span></a>
       </div>
     </div>
   </div>
@@ -126,6 +157,7 @@
           <ul class="flex flex-wrap gap-x-8 gap-y-3 font-display">
             <li><a href="/studio.html" class="link-arrow">Le studio</a></li>
             <li><a href="/games.html" class="link-arrow">Nos jeux</a></li>
+            <li><a href="/devlog.html" class="link-arrow">Devlog</a></li>
             <li><a href="/faq.html" class="link-arrow">FAQ</a></li>
             <li><a href="/credits.html" class="link-arrow">Crédits</a></li>
             <li><a href="/contact.html" class="link-arrow">Contact</a></li>
@@ -138,7 +170,7 @@
   <footer class="site-footer">
     <div class="container-flx">
       <div class="footer-bottom">
-        <p>© <span data-year>2026</span> Flexarion — Studio indépendant de jeux vidéo à Aix-en-Provence.</p>
+        <p>© <span data-year>2026</span> Flexarion — Studio indépendant de jeux vidéo à Aix-en-Provence. Tous droits réservés.</p>
         <a href="/index.html" class="back-to-top">Retour à l’accueil →</a>
       </div>
     </div>

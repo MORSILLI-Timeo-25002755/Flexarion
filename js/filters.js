@@ -1,13 +1,6 @@
 /**
  * ============================================================================
- * FLEXARION — Filtres de la galerie de jeux (games.html)
- * ============================================================================
- * - Boutons à bascule accessibles (aria-pressed) dans un groupe étiqueté.
- * - Toutes les cartes sont présentes dans le HTML (indexables) ; le filtre ne
- *   fait que les masquer/afficher (attribut hidden).
- * - Annonce du nombre de résultats dans une zone aria-live.
- * - Transitions GSAP (fondu + léger déplacement), coupées en mouvement réduit.
- * - Sans JavaScript, la barre de filtres est masquée et tout est affiché.
+ * FLEXARION — Filtres de la galerie de jeux (games.html & en/games.html)
  * ============================================================================
  */
 (function () {
@@ -17,6 +10,7 @@
   var grid = document.querySelector('[data-filter-grid]');
   if (!group || !grid) return;
 
+  var isEn = (document.documentElement.lang || '').toLowerCase().indexOf('en') === 0;
   var buttons = Array.prototype.slice.call(group.querySelectorAll('[data-filter]'));
   var cards = Array.prototype.slice.call(grid.querySelectorAll('[data-status]'));
   var live = document.querySelector('[data-filter-live]');
@@ -24,16 +18,12 @@
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   var busy = false;
 
-  group.hidden = false; // la barre n'est utile qu'avec JS
+  group.hidden = false;
 
-  var LABELS = {
-    all: 'tous statuts confondus',
-    dev: 'en développement',
-    soon: 'à venir',
-    available: 'disponible(s)',
-  };
+  var LABELS = isEn
+    ? { all: 'all statuses', dev: 'in development', soon: 'coming soon', available: 'available' }
+    : { all: 'tous statuts confondus', dev: 'en développement', soon: 'à venir', available: 'disponible(s)' };
 
-  // Compteurs par statut affichés dans les boutons.
   buttons.forEach(function (btn) {
     var f = btn.getAttribute('data-filter');
     var n = f === 'all' ? cards.length : cards.filter(function (c) { return c.getAttribute('data-status') === f; }).length;
@@ -47,8 +37,13 @@
 
   function announce(filter, count) {
     if (!live) return;
-    var noun = count > 1 ? 'projets affichés' : 'projet affiché';
-    live.textContent = count + ' ' + noun + ' — ' + LABELS[filter] + '.';
+    if (isEn) {
+      var nounEn = count === 1 ? 'project shown' : 'projects shown';
+      live.textContent = count + ' ' + nounEn + ' — ' + LABELS[filter] + '.';
+    } else {
+      var nounFr = count > 1 ? 'projets affichés' : 'projet affiché';
+      live.textContent = count + ' ' + nounFr + ' — ' + LABELS[filter] + '.';
+    }
   }
 
   function apply(filter) {

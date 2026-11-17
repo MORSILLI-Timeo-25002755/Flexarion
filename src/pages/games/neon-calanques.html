@@ -1,0 +1,87 @@
+<!-- @meta
+{
+  "out": "games/neon-calanques.html",
+  "lang": "fr",
+  "nav": "games",
+  "prefix": "../",
+  "canonical": "games/neon-calanques.html",
+  "frPath": "games/neon-calanques.html",
+  "enPath": "en/games/neon-calanques.html",
+  "title": "Neon Calanques | Jeu vidéo Flexarion",
+  "description": "Neon Calanques est un jeu d'action roguelite en préparation chez Flexarion, studio indépendant à Aix-en-Provence.",
+  "ogImageAlt": "Neon Calanques — Jeu vidéo indépendant par Flexarion.",
+  "sitemap": { "changefreq": "monthly", "priority": "0.8" },
+  "jsonLd": "  {\n    \"@context\": \"https://schema.org\",\n    \"@graph\": [\n      {\n        \"@type\": \"VideoGame\",\n        \"name\": \"Neon Calanques\",\n        \"url\": \"https://flexarion.timeoms.fr/games/neon-calanques.html\",\n        \"description\": \"Un roguelite nerveux où l’on traverse une Marseille futuriste entre parkour solaire et créatures de lumière.\",\n        \"genre\": \"Action roguelite\",\n        \"gamePlatform\": [\"PC\", \"Console\"],\n        \"author\": { \"@type\": \"Organization\", \"name\": \"Flexarion\", \"url\": \"https://flexarion.timeoms.fr/\" },\n        \"inLanguage\": \"fr-FR\"\n      },\n      {\n        \"@type\": \"BreadcrumbList\",\n        \"itemListElement\": [\n          { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Accueil\", \"item\": \"https://flexarion.timeoms.fr/\" },\n          { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Nos jeux\", \"item\": \"https://flexarion.timeoms.fr/games.html\" },\n          { \"@type\": \"ListItem\", \"position\": 3, \"name\": \"Neon Calanques\", \"item\": \"https://flexarion.timeoms.fr/games/neon-calanques.html\" }\n        ]\n      }\n    ]\n  }"
+}
+-->
+<body id="top">
+  {{> header}}
+
+  {{> mobile-menu}}
+
+  <main id="main-content">
+    <section class="page-hero" data-hero aria-labelledby="game-title">
+      <div class="container-flx">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <ol>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="../games.html">Nos jeux</a></li>
+            <li><span aria-current="page">Neon Calanques</span></li>
+          </ol>
+        </nav>
+
+        <h1 id="game-title" class="page-hero__title">
+          <span class="page-hero__kicker">FLX-02 · À venir</span>
+          <span class="page-hero__display">
+            <span class="split-word"><span>NEON</span></span>
+            <span class="split-word"><span class="text-ember">CALANQUES</span></span>
+          </span>
+        </h1>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section class="section">
+      <div class="container-flx">
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-start">
+          <div class="lg:col-span-5">
+            <figure class="media-frame aspect-[4/5]">
+              <img src="../assets/images/games/projet-02.webp" width="800" height="1000" alt="Illustration de Neon Calanques" loading="eager">
+            </figure>
+          </div>
+
+          <div class="lg:col-span-7 prose-flx">
+            <span class="status status--soon">À venir</span>
+            <h2 class="h-sub mt-6">La nuit appartient aux audacieux</h2>
+            <p class="mt-4">
+              Dans une Marseille futuriste baignée de néons, chaque course transforme la ville. Enchaînez les mouvements, apprivoisez des créatures de lumière et remontez jusqu’à la source d’un signal venu de la mer.
+            </p>
+
+            <dl class="game-card__facts mt-10">
+              <dt>Studio</dt>
+              <dd>Flexarion (Aix-en-Provence, France)</dd>
+              <dt>Genre</dt>
+              <dd>Action roguelite</dd>
+              <dt>Plateformes</dt>
+              <dd>PC, consoles</dd>
+              <dt>Statut</dt>
+              <dd>À venir</dd>
+            </dl>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="../games.html" class="btn">Retour aux jeux</a>
+              <a href="../contact.html" class="btn btn--primary" data-magnetic>
+                <span>Parler à l’équipe</span>
+                <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+</body>
+</html>

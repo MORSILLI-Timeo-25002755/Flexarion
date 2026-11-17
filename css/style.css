@@ -68,15 +68,16 @@ html body {
   overflow-x: clip;
 }
 
-/* Grain filmique très léger (SVG inline, aucune requête réseau). */
+/* Grain filmique très léger (texture PNG 64x64 mise en cache, sans filtre SVG temps réel). */
 body::after {
   content: '';
   position: fixed;
   inset: 0;
   z-index: 90;
   pointer-events: none;
-  opacity: 0.045;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.35;
+  background-image: url('../assets/images/grain.png');
+  background-repeat: repeat;
 }
 
 ::selection {
@@ -152,7 +153,7 @@ a { color: inherit; text-decoration: none; }
 .prose-flx p + p { margin-top: 1.15em; }
 .prose-flx p { color: rgba(244, 242, 237, 0.82); max-width: 62ch; }
 .prose-flx strong { color: var(--c-bone); font-weight: 600; }
-.prose-flx a:not(.btn) {
+.prose-flx a:not(.btn):not(.link-arrow) {
   color: var(--c-bone);
   text-decoration: underline;
   text-decoration-color: var(--c-ember);
@@ -160,7 +161,7 @@ a { color: inherit; text-decoration: none; }
   text-decoration-thickness: 1px;
   transition: color 0.2s ease;
 }
-.prose-flx a:not(.btn):hover { color: var(--c-ember); }
+.prose-flx a:not(.btn):not(.link-arrow):hover { color: var(--c-ember); }
 
 .mono {
   font-family: var(--f-mono);
@@ -506,7 +507,7 @@ a { color: inherit; text-decoration: none; }
 /* Entrée : rideau qui se retire en CSS pur (aucune dépendance JS). */
 .pt-enter .page-curtain {
   transform-origin: top;
-  animation: flx-curtain-out 0.75s var(--ease-curtain) 0.05s both;
+  animation: flx-curtain-out 0.45s var(--ease-curtain) 0.02s both;
 }
 @keyframes flx-curtain-out {
   from { transform: scaleY(1); }
@@ -1270,3 +1271,95 @@ a { color: inherit; text-decoration: none; }
   transform: none !important;
 }
 .js.anim-fallback [data-mask-reveal] { clip-path: none !important; }
+
+/* 18. SÉLECTEUR DE LANGUE, DEVLOG & PRESS KIT ============================= */
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.35rem;
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--c-line-strong);
+  border-radius: 999px;
+  background: rgba(244, 242, 237, 0.03);
+  font-family: var(--f-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.lang-switch:hover, .lang-switch:focus-visible {
+  border-color: var(--c-ember);
+  background: rgba(255, 90, 31, 0.08);
+}
+.lang-switch__current {
+  color: var(--c-ash-light);
+}
+.lang-switch__arrow {
+  width: 0.8rem;
+  height: 0.8rem;
+  color: var(--c-ember);
+  flex: none;
+  transition: transform 0.35s var(--ease-expo);
+}
+.lang-switch__target {
+  color: var(--c-bone);
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+.lang-switch--to-en:hover .lang-switch__arrow { transform: translateX(2px); }
+.lang-switch--to-fr:hover .lang-switch__arrow { transform: translateX(-2px); }
+.lang-switch:hover .lang-switch__target { color: var(--c-ember); }
+
+.devlog-list { display: grid; gap: 1.5rem; }
+.devlog-card {
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: var(--c-coal);
+  transition: border-color 0.35s ease;
+}
+.devlog-card:hover { border-color: var(--c-line-strong); }
+.devlog-card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.press-swatch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--c-line);
+  border-radius: var(--radius);
+  background: var(--c-coal);
+}
+.press-swatch__chip {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--c-line-strong);
+  flex: none;
+}
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.25rem;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--c-line-strong);
+  border-radius: 999px;
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-bone);
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.copy-btn:hover { background: var(--c-bone); color: var(--c-ink); border-color: var(--c-bone); }
+.copy-btn.is-copied { background: var(--c-ember); color: var(--c-ink); border-color: var(--c-ember); }
