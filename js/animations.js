@@ -129,7 +129,7 @@
         y: 0,
         delay: delay,
         duration: 1.1,
-        scrollTrigger: hasST ? { trigger: el, start: 'top 88%', once: true } : null,
+        scrollTrigger: hasST ? { trigger: el, start: 'top 92%', once: true } : null,
       });
     });
 
@@ -142,7 +142,7 @@
         y: 0,
         duration: 1.1,
         stagger: 0.12,
-        scrollTrigger: hasST ? { trigger: group, start: 'top 85%', once: true } : null,
+        scrollTrigger: hasST ? { trigger: group, start: 'top 92%', once: true } : null,
       });
     });
   }
@@ -154,11 +154,14 @@
     gsap.utils.toArray('[data-split]').forEach(function (el) {
       if (el.closest('[data-hero]')) return;
       var words = splitWords(el, 'split');
-      gsap.from(words, {
-        yPercent: 110,
+      // Réinitialise y: 0 après le translateY(110%) CSS pour ne pas animer vers +110%.
+      gsap.set(words, { yPercent: 110, y: 0 });
+      gsap.to(words, {
+        yPercent: 0,
+        y: 0,
         duration: 1.2,
         stagger: 0.06,
-        scrollTrigger: hasST ? { trigger: el, start: 'top 85%', once: true } : null,
+        scrollTrigger: hasST ? { trigger: el, start: 'top 92%', once: true } : null,
       });
     });
   }
