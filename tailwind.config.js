@@ -23,7 +23,7 @@
 (function (root) {
   var flexarionTailwindConfig = {
     // Fichiers analysés par le compilateur (ignoré par le CDN, utile en production).
-    content: ['./*.html', './games/**/*.html', './js/**/*.js'],
+    content: ['./*.html', './en/**/*.html', './games/**/*.html', './src/**/*.html', './js/**/*.js'],
     theme: {
       extend: {
         colors: {

@@ -11,15 +11,17 @@
   <meta name="description" content="Découvrez Flexarion, studio indépendant de création et développement de jeux vidéo basé à Aix-en-Provence. Explorez notre univers, notre équipe et nos projets.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#090909">
-  <link rel="canonical" href="https://www.flexarion.timeoms.fr/">
+  <link rel="canonical" href="https://flexarion.timeoms.fr/">
+  <link rel="alternate" hreflang="fr" href="https://flexarion.timeoms.fr/">
+  <link rel="alternate" hreflang="en" href="https://flexarion.timeoms.fr/en/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://flexarion.timeoms.fr/">
 
-  <!-- Open Graph -->
+  <meta property="og:url" content="https://flexarion.timeoms.fr/">
   <meta property="og:site_name" content="Flexarion">
   <meta property="og:title" content="Flexarion | Studio de jeux vidéo indépendant à Aix-en-Provence">
   <meta property="og:description" content="Découvrez Flexarion, studio indépendant de création et développement de jeux vidéo basé à Aix-en-Provence. Explorez notre univers, notre équipe et nos projets.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.flexarion.timeoms.fr/">
-  <meta property="og:image" content="https://www.flexarion.timeoms.fr/assets/images/og-image.jpg">
+  <meta property="og:image" content="https://flexarion.timeoms.fr/assets/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Flexarion — We Create Worlds. Studio de jeux vidéo indépendant à Aix-en-Provence, France.">
@@ -29,29 +31,27 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Flexarion | Studio de jeux vidéo indépendant à Aix-en-Provence">
   <meta name="twitter:description" content="Découvrez Flexarion, studio indépendant de création et développement de jeux vidéo basé à Aix-en-Provence.">
-  <meta name="twitter:image" content="https://www.flexarion.timeoms.fr/assets/images/og-image.jpg">
-  <meta name="twitter:image:alt" content="Flexarion — We Create Worlds. Studio de jeux vidéo indépendant à Aix-en-Provence.">
+  <meta name="twitter:image" content="https://flexarion.timeoms.fr/assets/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Flexarion — We Create Worlds. Studio de jeux vidéo indépendant à Aix-en-Provence, France.">
 
   <!-- Icônes & Manifest -->
   <link rel="icon" href="favicon.ico" sizes="32x32">
   <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
+  <link rel="alternate" type="application/rss+xml" title="Flexarion Devlog (RSS)" href="https://flexarion.timeoms.fr/feed.xml">
 
   <!-- Polices Google Fonts (font-display: swap) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
-
   <!-- Préchargement du visuel LCP (hero) -->
   <link rel="preload" as="image" href="assets/images/hero.webp" imagesrcset="assets/images/hero-960.webp 960w, assets/images/hero.webp 1920w" imagesizes="100vw" fetchpriority="high">
 
-  <!-- Styles : Tailwind CDN + Configuration compatible production + CSS modulaire -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="tailwind.config.js"></script>
+  <!-- Styles compilés (sans runtime Tailwind CDN) -->
+  <link rel="stylesheet" href="css/tailwind.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
-
   <!-- Données structurées Schema.org (JSON-LD) -->
   <script type="application/ld+json">
   {
@@ -59,12 +59,12 @@
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://www.flexarion.timeoms.fr/#organization",
+        "@id": "https://flexarion.timeoms.fr/#organization",
         "name": "Flexarion",
-        "url": "https://www.flexarion.timeoms.fr/",
+        "url": "https://flexarion.timeoms.fr/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://www.flexarion.timeoms.fr/assets/images/logo.png",
+          "url": "https://flexarion.timeoms.fr/assets/images/logo.png",
           "width": 512,
           "height": 512
         },
@@ -85,20 +85,20 @@
       },
       {
         "@type": "WebSite",
-        "@id": "https://www.flexarion.timeoms.fr/#website",
-        "url": "https://www.flexarion.timeoms.fr/",
+        "@id": "https://flexarion.timeoms.fr/#website",
+        "url": "https://flexarion.timeoms.fr/",
         "name": "Flexarion",
-        "inLanguage": "fr-FR",
-        "publisher": { "@id": "https://www.flexarion.timeoms.fr/#organization" }
+        "inLanguage": ["fr-FR", "en-US"],
+        "publisher": { "@id": "https://flexarion.timeoms.fr/#organization" }
       },
       {
         "@type": "WebPage",
-        "@id": "https://www.flexarion.timeoms.fr/#webpage",
-        "url": "https://www.flexarion.timeoms.fr/",
+        "@id": "https://flexarion.timeoms.fr/#webpage",
+        "url": "https://flexarion.timeoms.fr/",
         "name": "Flexarion | Studio de jeux vidéo indépendant à Aix-en-Provence",
         "description": "Découvrez Flexarion, studio indépendant de création et développement de jeux vidéo basé à Aix-en-Provence. Explorez notre univers, notre équipe et nos projets.",
-        "isPartOf": { "@id": "https://www.flexarion.timeoms.fr/#website" },
-        "about": { "@id": "https://www.flexarion.timeoms.fr/#organization" },
+        "isPartOf": { "@id": "https://flexarion.timeoms.fr/#website" },
+        "about": { "@id": "https://flexarion.timeoms.fr/#organization" },
         "inLanguage": "fr-FR"
       }
     ]
@@ -138,12 +138,18 @@
           <li><a href="index.html" class="nav-link" aria-current="page">Accueil</a></li>
           <li><a href="studio.html" class="nav-link">Le studio</a></li>
           <li><a href="games.html" class="nav-link">Nos jeux</a></li>
+          <li><a href="devlog.html" class="nav-link">Devlog</a></li>
           <li><a href="faq.html" class="nav-link">FAQ</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
       </nav>
 
       <div class="flex items-center gap-3">
+        <a href="en/index.html" class="lang-switch lang-switch--to-en" hreflang="en" aria-label="Passer le site en anglais (English)" title="Passer le site en anglais (English)">
+          <span class="lang-switch__current" aria-hidden="true">FR</span>
+          <svg class="lang-switch__arrow" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5"/></svg>
+          <span class="lang-switch__target" aria-hidden="true">EN</span>
+        </a>
         <a href="contact.html" class="btn btn--small header-cta" data-magnetic>
           <span>Parler d’un projet</span>
           <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
@@ -164,22 +170,31 @@
         <li><a href="index.html" class="mobile-menu__link" data-menu-item aria-current="page"><span class="mono">01</span><span>Accueil</span></a></li>
         <li><a href="studio.html" class="mobile-menu__link" data-menu-item><span class="mono">02</span><span>Le studio</span></a></li>
         <li><a href="games.html" class="mobile-menu__link" data-menu-item><span class="mono">03</span><span>Nos jeux</span></a></li>
-        <li><a href="faq.html" class="mobile-menu__link" data-menu-item><span class="mono">04</span><span>FAQ</span></a></li>
-        <li><a href="credits.html" class="mobile-menu__link" data-menu-item><span class="mono">05</span><span>Crédits</span></a></li>
-        <li><a href="contact.html" class="mobile-menu__link" data-menu-item><span class="mono">06</span><span>Contact</span></a></li>
+        <li><a href="devlog.html" class="mobile-menu__link" data-menu-item><span class="mono">04</span><span>Devlog</span></a></li>
+        <li><a href="faq.html" class="mobile-menu__link" data-menu-item><span class="mono">05</span><span>FAQ</span></a></li>
+        <li><a href="credits.html" class="mobile-menu__link" data-menu-item><span class="mono">06</span><span>Crédits</span></a></li>
+        <li><a href="press.html" class="mobile-menu__link" data-menu-item><span class="mono">07</span><span>Press Kit</span></a></li>
+        <li><a href="contact.html" class="mobile-menu__link" data-menu-item><span class="mono">08</span><span>Contact</span></a></li>
       </ul>
     </nav>
     <div class="mobile-menu__footer">
-      <div>
-        <p class="mono text-muted">Studio indépendant · Aix-en-Provence</p>
-        <a href="mailto:contact@flexarion.timeoms.fr" class="contact-email mt-2" data-email-link data-email-text>contact@flexarion.timeoms.fr</a>
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p class="mono text-muted">Studio indépendant · Aix-en-Provence</p>
+          <a href="mailto:contact@flexarion.timeoms.fr" class="contact-email mt-2" data-email-link data-email-text>contact@flexarion.timeoms.fr</a>
+        </div>
+        <a href="en/index.html" class="lang-switch lang-switch--to-en" hreflang="en" aria-label="Passer le site en anglais (English)" title="Passer le site en anglais (English)">
+          <span class="lang-switch__current" aria-hidden="true">FR</span>
+          <svg class="lang-switch__arrow" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 8h10M9.5 4.5 13 8l-3.5 3.5"/></svg>
+          <span class="lang-switch__target" aria-hidden="true">EN</span>
+        </a>
       </div>
       <div class="social-list">
-        <a class="social-link" data-social="instagram" aria-label="Instagram de Flexarion — bientôt disponible">Instagram <span class="social-link__soon">Bientôt</span></a>
-        <a class="social-link" data-social="tiktok" aria-label="TikTok de Flexarion — bientôt disponible">TikTok <span class="social-link__soon">Bientôt</span></a>
-        <a class="social-link" data-social="youtube" aria-label="YouTube de Flexarion — bientôt disponible">YouTube <span class="social-link__soon">Bientôt</span></a>
-        <a class="social-link" data-social="discord" aria-label="Discord de Flexarion — bientôt disponible">Discord <span class="social-link__soon">Bientôt</span></a>
-        <a class="social-link" data-social="x" aria-label="X de Flexarion — bientôt disponible">X <span class="social-link__soon">Bientôt</span></a>
+        <a class="social-link" data-social="instagram" aria-label="Instagram — bientôt disponible">Instagram <span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="tiktok" aria-label="TikTok — bientôt disponible">TikTok <span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="youtube" aria-label="YouTube — bientôt disponible">YouTube <span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="discord" aria-label="Discord — bientôt disponible">Discord <span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="x" aria-label="X — bientôt disponible">X <span class="social-link__soon">Bientôt</span></a>
       </div>
     </div>
   </div>
@@ -206,7 +221,7 @@
       <div class="container-flx">
         <p class="hero__kicker" data-hero-fade>Studio indépendant de jeux vidéo — Aix-en-Provence, France</p>
 
-        <h1 id="hero-title" class="display hero__title">
+        <h1 id="hero-title" class="display hero__title" lang="en">
           <span class="split-word"><span>WE</span></span>
           <span class="split-word"><span>CREATE</span></span>
           <br>
@@ -214,7 +229,7 @@
         </h1>
 
         <div class="mt-8 grid gap-8 lg:grid-cols-12 lg:items-end">
-          <p class="hero__subtitle lg:col-span-6" data-hero-fade>
+          <p class="hero__subtitle lg:col-span-6" lang="en" data-hero-fade>
             Independent game studio based in Aix-en-Provence, France.
           </p>
           <div class="hero__actions flex flex-wrap gap-4 lg:col-span-6 lg:justify-end" data-hero-fade>
@@ -444,7 +459,7 @@
     <section class="section section--coal manifesto" aria-labelledby="manifesto-heading">
       <div class="container-flx">
         <span class="eyebrow">03 / Manifeste</span>
-        <h2 id="manifesto-heading" class="h-section manifesto__title mt-5" data-split>
+        <h2 id="manifesto-heading" class="h-section manifesto__title mt-5" lang="en" data-split>
           MORE THAN GAMES. <span class="text-ember">EXPERIENCES.</span>
         </h2>
 
@@ -458,8 +473,8 @@
                 <span>Lire notre manifeste créatif</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
               </a>
-              <a href="faq.html" class="link-arrow">
-                <span>Consulter la FAQ du studio</span>
+              <a href="devlog.html" class="link-arrow">
+                <span>Suivre le journal du studio</span>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
               </a>
             </div>
@@ -522,7 +537,7 @@
               </div>
             </div>
             <h3 class="team-card__name">Timéo Morsilli</h3>
-            <p class="team-card__role mono"><span class="ph" data-bind="team.timeo.role">Rôle à compléter</span></p>
+            <p class="team-card__role mono"><span data-bind="team.timeo.role">Développeur</span></p>
           </article>
 
           <article class="team-card" data-reveal>
@@ -541,7 +556,7 @@
               </div>
             </div>
             <h3 class="team-card__name">Hugo Banti</h3>
-            <p class="team-card__role mono"><span class="ph" data-bind="team.hugo.role">Rôle à compléter</span></p>
+            <p class="team-card__role mono"><span data-bind="team.hugo.role">Modélisateur 3D</span></p>
           </article>
 
           <article class="team-card" data-reveal>
@@ -560,7 +575,7 @@
               </div>
             </div>
             <h3 class="team-card__name">Enrique Ruiz</h3>
-            <p class="team-card__role mono"><span class="ph" data-bind="team.enrique.role">Rôle à compléter</span></p>
+            <p class="team-card__role mono"><span data-bind="team.enrique.role">Développeur</span></p>
           </article>
         </div>
       </div>
@@ -572,7 +587,7 @@
     <section class="section cta-block" aria-labelledby="cta-heading">
       <div class="container-flx text-center">
         <span class="eyebrow">05 / Collaboration &amp; Contact</span>
-        <h2 id="cta-heading" class="cta-block__title mt-6" data-split>
+        <h2 id="cta-heading" class="cta-block__title mt-6" lang="en" data-split>
           LET’S CREATE SOMETHING <span class="text-ember">UNFORGETTABLE.</span>
         </h2>
         <p class="lead mx-auto mt-6" data-reveal>
@@ -583,8 +598,8 @@
             <span>Contacter Flexarion</span>
             <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
-          <a href="credits.html" class="btn" data-magnetic>
-            <span>Rencontrer l’équipe</span>
+          <a href="press.html" class="btn" data-magnetic>
+            <span>Dossier de presse</span>
           </a>
         </div>
       </div>
@@ -592,44 +607,33 @@
 
   </main>
 
-  <!-- ==================== PIED DE PAGE ==================== -->
   <footer class="site-footer">
     <div class="container-flx">
       <div class="footer-grid">
         <div>
-          <a href="index.html" class="brand" aria-label="Flexarion — Accueil">
+          <a href="index.html" class="brand" aria-label="Flexarion">
             <svg class="brand__mark" viewBox="0 0 64 64" width="32" height="32" aria-hidden="true">
-              <path fill="#F4F2ED" d="M14 12h38l-6 9H14z"/>
-              <path fill="#F4F2ED" d="M14 28h26l-6 9H14z"/>
-              <path fill="#F4F2ED" d="M14 12h9v40h-9z"/>
-              <path fill="#FF5A1F" d="M42 43h9v9h-9z"/>
-            </svg>
+          <path fill="#F4F2ED" d="M14 12h38l-6 9H14z"/>
+          <path fill="#F4F2ED" d="M14 28h26l-6 9H14z"/>
+          <path fill="#F4F2ED" d="M14 12h9v40h-9z"/>
+          <path fill="#FF5A1F" d="M42 43h9v9h-9z"/>
+        </svg>
             <span>FLEXARION</span>
           </a>
           <p class="mt-4 text-muted max-w-xs">
             Studio indépendant de développement et création de jeux vidéo basé à Aix-en-Provence, Provence-Alpes-Côte d’Azur, France.
           </p>
           <div class="social-list mt-6" aria-label="Réseaux sociaux de Flexarion">
-            <a class="social-link" data-social="instagram" aria-label="Instagram de Flexarion — bientôt disponible">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-              <span class="sr-only">Instagram</span><span class="social-link__soon">Bientôt</span>
-            </a>
-            <a class="social-link" data-social="tiktok" aria-label="TikTok de Flexarion — bientôt disponible">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3v11.5a4.5 4.5 0 1 1-3.5-4.38"/><path d="M14 6.5c1.5 2 3.5 3 6 3"/></svg>
-              <span class="sr-only">TikTok</span><span class="social-link__soon">Bientôt</span>
-            </a>
-            <a class="social-link" data-social="youtube" aria-label="YouTube de Flexarion — bientôt disponible">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg>
-              <span class="sr-only">YouTube</span><span class="social-link__soon">Bientôt</span>
-            </a>
-            <a class="social-link" data-social="discord" aria-label="Discord de Flexarion — bientôt disponible">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7.5 7.5a12 12 0 0 1 9 0l1.5 8a10 10 0 0 1-4.5 1.5l-1-1.5m-1 0-1 1.5A10 10 0 0 1 6 15.5l1.5-8Z"/><circle cx="9.5" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
-              <span class="sr-only">Discord</span><span class="social-link__soon">Bientôt</span>
-            </a>
-            <a class="social-link" data-social="x" aria-label="X de Flexarion — bientôt disponible">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg>
-              <span class="sr-only">X</span><span class="social-link__soon">Bientôt</span>
-            </a>
+            <a class="social-link" data-social="instagram" aria-label="Instagram — bientôt disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              <span class="sr-only">Instagram</span><span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="tiktok" aria-label="TikTok — bientôt disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M14 3v11.5a4.5 4.5 0 1 1-3.5-4.38"/><path d="M14 6.5c1.5 2 3.5 3 6 3"/></svg>
+              <span class="sr-only">TikTok</span><span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="youtube" aria-label="YouTube — bientôt disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor" stroke="none"/></svg>
+              <span class="sr-only">YouTube</span><span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="discord" aria-label="Discord — bientôt disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7.5 7.5a12 12 0 0 1 9 0l1.5 8a10 10 0 0 1-4.5 1.5l-1-1.5m-1 0-1 1.5A10 10 0 0 1 6 15.5l1.5-8Z"/><circle cx="9.5" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="12" r="1" fill="currentColor" stroke="none"/></svg>
+              <span class="sr-only">Discord</span><span class="social-link__soon">Bientôt</span></a>
+            <a class="social-link" data-social="x" aria-label="X — bientôt disponible"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg>
+              <span class="sr-only">X</span><span class="social-link__soon">Bientôt</span></a>
           </div>
         </div>
 
@@ -639,6 +643,7 @@
             <li><a href="index.html" aria-current="page">Accueil</a></li>
             <li><a href="studio.html">Le studio</a></li>
             <li><a href="games.html">Nos jeux</a></li>
+            <li><a href="devlog.html">Devlog</a></li>
             <li><a href="faq.html">FAQ</a></li>
             <li><a href="credits.html">Crédits</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -648,8 +653,10 @@
         <div>
           <h2 class="footer-title">Informations</h2>
           <ul class="footer-links">
+            <li><a href="press.html">Press Kit</a></li>
             <li><a href="legal.html">Mentions légales</a></li>
             <li><a href="privacy.html">Politique de confidentialité</a></li>
+            <li><a href="feed.xml">Flux RSS (Devlog)</a></li>
             <li><a href="sitemap.xml">Plan du site (XML)</a></li>
           </ul>
         </div>

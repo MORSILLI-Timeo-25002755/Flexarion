@@ -1,65 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  FLEXARION — Plan du site XML (sitemap.xml)
-  Domaine officiel à remplacer : https://www.flexarion.timeoms.fr
-  Les balises <lastmod> ne doivent être conservées que si elles sont tenues à jour
-  lors des modifications réelles de chaque page.
-  Seules les pages publiques et indexables sont listées ici (ni 404.html).
+  FLEXARION — Plan du site XML (généré par scripts/build.mjs)
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.flexarion.timeoms.fr/</loc>
+    <loc>https://flexarion.timeoms.fr/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/studio.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.flexarion.timeoms.fr/games.html</loc>
+    <loc>https://flexarion.timeoms.fr/games.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/games/les-veilleurs-de-brume.html</loc>
+    <loc>https://flexarion.timeoms.fr/studio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/games/neon-calanques.html</loc>
+    <loc>https://flexarion.timeoms.fr/devlog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/games/les-veilleurs-de-brume.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/games/lisiere.html</loc>
+    <loc>https://flexarion.timeoms.fr/games/lisiere.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/faq.html</loc>
+    <loc>https://flexarion.timeoms.fr/games/neon-calanques.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/credits.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/credits.html</loc>
+    <loc>https://flexarion.timeoms.fr/faq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/contact.html</loc>
+    <loc>https://flexarion.timeoms.fr/press.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/legal.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/index.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/games.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/studio.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/legal.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://flexarion.timeoms.fr/en/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.flexarion.timeoms.fr/privacy.html</loc>
+    <loc>https://flexarion.timeoms.fr/en/devlog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/games/les-veilleurs-de-brume.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/games/lisiere.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/games/neon-calanques.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/credits.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/press.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/legal.html</loc>
     <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://flexarion.timeoms.fr/en/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 </urlset>

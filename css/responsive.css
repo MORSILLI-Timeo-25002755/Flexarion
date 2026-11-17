@@ -54,6 +54,7 @@
   .team-grid--offset > :nth-child(2) { margin-top: 5rem; }
   .team-grid--offset > :nth-child(3) { margin-top: 10rem; }
   .footer-grid { grid-template-columns: 1.6fr repeat(3, minmax(0, 1fr)); gap: 3rem; }
+  .game-grid--featured { padding-bottom: 4rem; }
   .game-grid--featured > :nth-child(2) { transform: translateY(4rem); }
 }
 

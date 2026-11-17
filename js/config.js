@@ -16,8 +16,7 @@
  * ============================================================================
  */
 window.FLEXARION_CONFIG = Object.freeze({
-  /* Domaine officiel (sans barre oblique finale). À remplacer partout :
-     rechercher « https://www.flexarion.example » dans le projet. */
+  /* Domaine officiel (sans barre oblique finale). */
   siteUrl: 'https://flexarion.timeoms.fr',
 
   studio: {
@@ -58,17 +57,17 @@ window.FLEXARION_CONFIG = Object.freeze({
   /* Équipe — les rôles et biographies vides restent affichés comme
      placeholders dans le HTML. Renseignez-les ici ET dans credits.html. */
   team: {
-    timeo: { name: 'Timéo Morsilli', role: '', bio: '' },
-    hugo: { name: 'Hugo Banti', role: '', bio: '' },
-    enrique: { name: 'Enrique Ruiz', role: '', bio: '' },
+    timeo: { name: 'Timéo Morsilli', role: 'Développeur', bio: '' },
+    hugo: { name: 'Hugo Banti', role: 'Modélisateur 3D', bio: '' },
+    enrique: { name: 'Enrique Ruiz', role: 'Développeur', bio: '' },
   },
 
   /* Jeux — concepts originaux présentés sur le site.
      status : "dev" (en développement) | "soon" (à venir) | "available" (disponible)
      detailUrl : chemin de la fiche détaillée (ex. "games/nom-du-jeu.html"). */
   games: [
-    { id: 'projet-01', name: 'Les Veilleurs de Brume', status: 'dev', genre: 'Aventure narrative', platforms: ['PC'], detailUrl: 'games.html#projet-01' },
-    { id: 'projet-02', name: 'Neon Calanques', status: 'soon', genre: 'Action roguelite', platforms: ['PC', 'Console'], detailUrl: 'games.html#projet-02' },
-    { id: 'projet-03', name: 'Lisière', status: 'soon', genre: 'Puzzle contemplatif', platforms: ['PC', 'Mobile'], detailUrl: 'games.html#projet-03' },
+    { id: 'projet-01', name: 'Les Veilleurs de Brume', status: 'dev', genre: 'Aventure narrative', platforms: ['PC'], detailUrl: 'games/les-veilleurs-de-brume.html' },
+    { id: 'projet-02', name: 'Neon Calanques', status: 'soon', genre: 'Action roguelite', platforms: ['PC', 'Console'], detailUrl: 'games/neon-calanques.html' },
+    { id: 'projet-03', name: 'Lisière', status: 'soon', genre: 'Puzzle contemplatif', platforms: ['PC', 'Mobile'], detailUrl: 'games/lisiere.html' },
   ],
 });

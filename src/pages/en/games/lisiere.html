@@ -1,0 +1,83 @@
+<!-- @meta
+{
+  "out": "en/games/lisiere.html",
+  "lang": "en",
+  "nav": "games",
+  "inSubdir": true,
+  "prefix": "../../",
+  "canonical": "en/games/lisiere.html",
+  "frPath": "games/lisiere.html",
+  "enPath": "en/games/lisiere.html",
+  "title": "Lisière | Flexarion Game",
+  "description": "Lisière is a contemplative puzzle game in preparation at Flexarion, an independent game studio in Aix-en-Provence.",
+  "ogImageAlt": "Lisière — Independent game by Flexarion.",
+  "sitemap": { "changefreq": "monthly", "priority": "0.7" },
+  "jsonLd": "  {\n    \"@context\": \"https://schema.org\",\n    \"@graph\": [\n      {\n        \"@type\": \"VideoGame\",\n        \"name\": \"Lisière\",\n        \"url\": \"https://flexarion.timeoms.fr/en/games/lisiere.html\",\n        \"description\": \"A contemplative puzzle game on the border between forest and memory, built around light and sound.\",\n        \"genre\": \"Contemplative puzzle\",\n        \"gamePlatform\": [\"PC\", \"Mobile\"],\n        \"author\": { \"@type\": \"Organization\", \"name\": \"Flexarion\", \"url\": \"https://flexarion.timeoms.fr/\" },\n        \"inLanguage\": \"en-US\"\n      },\n      {\n        \"@type\": \"BreadcrumbList\",\n        \"itemListElement\": [\n          { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Home\", \"item\": \"https://flexarion.timeoms.fr/en/index.html\" },\n          { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Games\", \"item\": \"https://flexarion.timeoms.fr/en/games.html\" },\n          { \"@type\": \"ListItem\", \"position\": 3, \"name\": \"Lisière\", \"item\": \"https://flexarion.timeoms.fr/en/games/lisiere.html\" }\n        ]\n      }\n    ]\n  }"
+}
+-->
+<body id="top">
+  {{> header}}
+
+  {{> mobile-menu}}
+
+  <main id="main-content">
+    <section class="page-hero" data-hero aria-labelledby="game-title">
+      <div class="container-flx">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../games.html">Games</a></li>
+            <li><span aria-current="page">Lisière</span></li>
+          </ol>
+        </nav>
+
+        <h1 id="game-title" class="page-hero__title">
+          <span class="page-hero__kicker">FLX-03 · Coming soon</span>
+          <span class="page-hero__display">
+            <span class="split-word"><span>LISIÈRE</span></span>
+          </span>
+        </h1>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <section class="section">
+      <div class="container-flx">
+        <div class="grid gap-12 lg:grid-cols-12 lg:items-start">
+          <div class="lg:col-span-5">
+            <figure class="media-frame aspect-[4/5]">
+              <img src="../../assets/images/games/projet-03.webp" width="800" height="1000" alt="Artwork for Lisière" loading="eager">
+            </figure>
+          </div>
+
+          <div class="lg:col-span-7 prose-flx">
+            <span class="status status--soon">Coming soon</span>
+            <h2 class="h-sub mt-6">Memory grows toward the light</h2>
+            <p class="mt-4">
+              Lisière is a contemplative puzzle game where every sound reveals a path. Bring a living forest and a traveler’s memories into dialogue to reconstruct the shape of a vanished place.
+            </p>
+
+            <dl class="game-card__facts mt-10">
+              <dt>Studio</dt><dd>Flexarion (Aix-en-Provence, France)</dd>
+              <dt>Genre</dt><dd>Contemplative puzzle</dd>
+              <dt>Platforms</dt><dd>PC, Mobile</dd>
+              <dt>Status</dt><dd>Coming soon</dd>
+            </dl>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="../games.html" class="btn">Back to games</a>
+              <a href="../contact.html" class="btn btn--primary" data-magnetic>
+                <span>Talk to the team</span>
+                <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {{> footer}}
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!-- @meta
+{
+  "out": "contact.html",
+  "lang": "fr",
+  "nav": "contact",
+  "canonical": "contact.html",
+  "frPath": "contact.html",
+  "enPath": "en/contact.html",
+  "scripts": ["js/contact.js"],
+  "title": "Contact | Contacter le studio Flexarion à Aix-en-Provence",
+  "description": "Une question, une collaboration ou un projet ? Contactez Flexarion, studio indépendant de jeux vidéo basé à Aix-en-Provence, Provence-Alpes-Côte d'Azur.",
+  "ogImageAlt": "Flexarion — Contacter le studio à Aix-en-Provence.",
+  "twitterDescription": "Échangez avec Flexarion, studio indépendant de développement de jeux vidéo à Aix-en-Provence.",
+  "sitemap": { "changefreq": "monthly", "priority": "0.8" },
+  "jsonLd": "  {\n    \"@context\": \"https://schema.org\",\n    \"@graph\": [\n      {\n        \"@type\": \"ContactPage\",\n        \"@id\": \"https://flexarion.timeoms.fr/contact.html#webpage\",\n        \"url\": \"https://flexarion.timeoms.fr/contact.html\",\n        \"name\": \"Contact | Contacter le studio Flexarion à Aix-en-Provence\",\n        \"description\": \"Une question, une collaboration ou un projet ? Contactez Flexarion, studio indépendant de jeux vidéo basé à Aix-en-Provence.\",\n        \"isPartOf\": { \"@id\": \"https://flexarion.timeoms.fr/#website\" },\n        \"about\": { \"@id\": \"https://flexarion.timeoms.fr/#organization\" },\n        \"inLanguage\": \"fr-FR\"\n      },\n      {\n        \"@type\": \"BreadcrumbList\",\n        \"itemListElement\": [\n          { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Accueil\", \"item\": \"https://flexarion.timeoms.fr/\" },\n          { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Contact\", \"item\": \"https://flexarion.timeoms.fr/contact.html\" }\n        ]\n      }\n    ]\n  }"
+}
+-->
+<body id="top">
+  {{> header}}
+
+  {{> mobile-menu}}
+
+  <main id="main-content">
+
+    <!-- ==================== PAGE HERO ==================== -->
+    <section class="page-hero" data-hero aria-labelledby="contact-hero-title">
+      <div class="container-flx">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li><span aria-current="page">Contact</span></li>
+          </ol>
+        </nav>
+
+        <h1 id="contact-hero-title" class="page-hero__title">
+          <span class="page-hero__kicker">Contacter le studio Flexarion à Aix-en-Provence</span>
+          <span class="page-hero__display" lang="en">
+            <span class="split-word"><span>LET’S</span></span>
+            <span class="split-word"><span class="text-ember">TALK</span></span>
+          </span>
+        </h1>
+
+        <div class="mt-10 grid gap-8 lg:grid-cols-12">
+          <p class="lead lg:col-span-7" data-hero-fade>
+            Une question sur notre studio indépendant, une proposition de collaboration artistique ou technique, une demande presse ou un simple message ? Écrivez-nous.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- ==================== FORMULAIRE & COORDONNÉES ==================== -->
+    <section class="section" aria-labelledby="contact-section-heading">
+      <div class="container-flx">
+        <h2 id="contact-section-heading" class="sr-only">Coordonnées et formulaire de contact</h2>
+
+        <div class="grid gap-12 lg:grid-cols-12">
+          <!-- Coordonnées directes -->
+          <div class="lg:col-span-5 flex flex-col gap-6" data-reveal>
+            <div class="contact-card">
+              <p class="mono text-ember">Courrier électronique</p>
+              <p class="mt-3">
+                <a href="mailto:contact@flexarion.timeoms.fr" class="contact-email" data-email-link data-email-text>contact@flexarion.timeoms.fr</a>
+              </p>
+            </div>
+
+            <div class="contact-card">
+              <p class="mono text-ember">Localisation du studio</p>
+              <p class="h-sub mt-3">Aix-en-Provence</p>
+              <p class="text-muted mt-1">Provence-Alpes-Côte d’Azur, France</p>
+            </div>
+
+            <div class="contact-card">
+              <p class="mono text-ember">Réseaux sociaux</p>
+              <div class="social-list mt-5">
+                {{> social-list}}
+              </div>
+            </div>
+          </div>
+
+          <!-- Formulaire -->
+          <div class="lg:col-span-7" data-reveal>
+            <div class="notice mb-6" data-form-notice hidden>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+              <p>
+                L’envoi serveur direct n’est pas encore activé. La validation du formulaire préparera automatiquement votre message dans votre logiciel de messagerie (<code>mailto:</code>).
+              </p>
+            </div>
+
+            <form class="form-grid" data-contact-form>
+              <!-- Champ piège anti-spam -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="website">Site web (ne pas remplir)</label>
+                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="form-status" data-form-status tabindex="-1" role="status" aria-live="polite" hidden></div>
+
+              <div class="form-grid form-grid--2">
+                <div class="field">
+                  <label for="name">Nom <span class="req" aria-hidden="true">*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    placeholder="Votre nom ou pseudonyme"
+                    aria-describedby="name-error">
+                  <p id="name-error" class="field__error" aria-live="polite"></p>
+                </div>
+
+                <div class="field">
+                  <label for="email">Adresse e-mail <span class="req" aria-hidden="true">*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    placeholder="vous@domaine.fr"
+                    aria-describedby="email-error">
+                  <p id="email-error" class="field__error" aria-live="polite"></p>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="subject">Sujet <span class="req" aria-hidden="true">*</span></label>
+                <select id="subject" name="subject" required aria-describedby="subject-error">
+                  <option value="">Choisir un sujet…</option>
+                  <option value="collaboration">Collaboration / Partenariat</option>
+                  <option value="presse">Presse &amp; Communication</option>
+                  <option value="jeux">Question sur nos projets de jeux</option>
+                  <option value="autre">Autre demande</option>
+                </select>
+                <p id="subject-error" class="field__error" aria-live="polite"></p>
+              </div>
+
+              <div class="field">
+                <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  minlength="20"
+                  maxlength="5000"
+                  placeholder="Décrivez votre demande, votre projet ou votre question…"
+                  aria-describedby="message-hint message-error"></textarea>
+                <p id="message-hint" class="field__hint">20 caractères minimum. Les informations saisies servent uniquement à répondre à votre demande (voir notre <a href="privacy.html" class="underline decoration-ember">politique de confidentialité</a>).</p>
+                <p id="message-error" class="field__error" aria-live="polite"></p>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                <p class="mono text-muted"><span class="text-ember">*</span> Champs obligatoires</p>
+                <button type="submit" class="btn btn--primary" data-magnetic>
+                  <span data-label>Envoyer le message</span>
+                  <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {{> footer}}
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!-- @meta
+{
+  "out": "games.html",
+  "lang": "fr",
+  "nav": "games",
+  "canonical": "games.html",
+  "frPath": "games.html",
+  "enPath": "en/games.html",
+  "scripts": ["js/filters.js"],
+  "title": "Nos Jeux | Créations et projets du studio Flexarion",
+  "description": "Découvrez Les Veilleurs de Brume, Neon Calanques et Lisière, les jeux originaux du studio indépendant Flexarion à Aix-en-Provence.",
+  "ogImageAlt": "Catalogue des jeux vidéo et projets du studio Flexarion.",
+  "sitemap": { "changefreq": "weekly", "priority": "0.9" },
+  "jsonLd": "  {\n    \"@context\": \"https://schema.org\",\n    \"@graph\": [\n      {\n        \"@type\": \"CollectionPage\",\n        \"@id\": \"https://flexarion.timeoms.fr/games.html#webpage\",\n        \"url\": \"https://flexarion.timeoms.fr/games.html\",\n        \"name\": \"Nos Jeux | Créations et projets du studio Flexarion\",\n        \"description\": \"Catalogue des projets de jeux vidéo du studio indépendant Flexarion à Aix-en-Provence.\",\n        \"isPartOf\": { \"@id\": \"https://flexarion.timeoms.fr/#website\" },\n        \"about\": { \"@id\": \"https://flexarion.timeoms.fr/#organization\" },\n        \"mainEntity\": { \"@id\": \"https://flexarion.timeoms.fr/games.html#game-list\" },\n        \"inLanguage\": \"fr-FR\"\n      },\n      {\n        \"@type\": \"ItemList\",\n        \"@id\": \"https://flexarion.timeoms.fr/games.html#game-list\",\n        \"name\": \"Jeux vidéo originaux de Flexarion\",\n        \"itemListElement\": [\n          { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Les Veilleurs de Brume\", \"url\": \"https://flexarion.timeoms.fr/games/les-veilleurs-de-brume.html\" },\n          { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Neon Calanques\", \"url\": \"https://flexarion.timeoms.fr/games/neon-calanques.html\" },\n          { \"@type\": \"ListItem\", \"position\": 3, \"name\": \"Lisière\", \"url\": \"https://flexarion.timeoms.fr/games/lisiere.html\" }\n        ]\n      },\n      {\n        \"@type\": \"BreadcrumbList\",\n        \"itemListElement\": [\n          { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Accueil\", \"item\": \"https://flexarion.timeoms.fr/\" },\n          { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Nos jeux\", \"item\": \"https://flexarion.timeoms.fr/games.html\" }\n        ]\n      }\n    ]\n  }"
+}
+-->
+<body id="top">
+  {{> header}}
+
+  {{> mobile-menu}}
+
+  <main id="main-content">
+
+    <!-- ==================== PAGE HERO ==================== -->
+    <section class="page-hero" data-hero aria-labelledby="games-hero-title">
+      <div class="container-flx">
+        <nav class="breadcrumb" aria-label="Fil d'Ariane">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li><span aria-current="page">Nos jeux</span></li>
+          </ol>
+        </nav>
+
+        <h1 id="games-hero-title" class="page-hero__title">
+          <span class="page-hero__kicker">Créations vidéoludiques — Studio Flexarion</span>
+          <span class="page-hero__display" lang="en">
+            <span class="split-word"><span>SELECTED</span></span>
+            <span class="split-word"><span class="text-ember">WORLDS</span></span>
+          </span>
+        </h1>
+
+        <div class="mt-10 grid gap-8 lg:grid-cols-12">
+          <p class="lead lg:col-span-7" data-hero-fade>
+            Retrouvez ici l’ensemble des créations du studio Flexarion. Nos jeux étant encore en préparation, les fiches ci-dessous représentent des emplacements provisoires en attendant les annonces officielles.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="rule">
+
+    <!-- ==================== GALERIE & FILTRES ==================== -->
+    <section class="section" aria-labelledby="catalogue-heading">
+      <div class="container-flx">
+        <div class="notice mb-10" role="note" data-reveal>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/>
+          </svg>
+          <div>
+            <p><strong>Jeux en production :</strong> ces créations sont des concepts originaux de Flexarion. Les dates de sortie et plateformes définitives seront annoncées au fil du développement.</p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between mb-10">
+          <h2 id="catalogue-heading" class="h-sub">Catalogue des projets</h2>
+
+          <!-- Barre de filtres (affichée uniquement lorsque JS est actif) -->
+          <div class="filter-bar" role="group" aria-label="Filtrer les projets par statut" data-filter-group hidden>
+            <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">
+              <span>Tous</span>
+              <span class="filter-btn__count">03</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="dev" aria-pressed="false">
+              <span>En développement</span>
+              <span class="filter-btn__count">01</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="soon" aria-pressed="false">
+              <span>À venir</span>
+              <span class="filter-btn__count">02</span>
+            </button>
+            <button type="button" class="filter-btn" data-filter="available" aria-pressed="false">
+              <span>Disponibles</span>
+              <span class="filter-btn__count">00</span>
+            </button>
+          </div>
+        </div>
+
+        <p class="sr-only" aria-live="polite" data-filter-live>3 projets affichés — tous statuts confondus.</p>
+
+        <div class="game-grid" data-filter-grid data-reveal-stagger>
+          <!-- Projet 01 -->
+          <article id="projet-01" class="game-card" data-status="dev" data-reveal>
+            <div class="game-card__media">
+              <img
+                src="assets/images/games/projet-01.webp"
+                width="800"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+                alt="Illustration de l'aventure narrative Les Veilleurs de Brume, jeu Flexarion en développement">
+              <div class="game-card__badges">
+                <span class="tag">FLX-01</span>
+                <span class="status status--dev">En développement</span>
+              </div>
+            </div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Les Veilleurs de Brume</h3>
+              <p class="game-card__desc">
+                Une aventure narrative où une cartographe suit les lumières d’une cité engloutie et apprend à écouter la brume.
+              </p>
+              <dl class="game-card__facts">
+                <dt>Genre</dt>
+                <dd>Aventure narrative</dd>
+                <dt>Plateformes</dt>
+                <dd>PC</dd>
+                <dt>Statut</dt>
+                <dd>En développement</dd>
+              </dl>
+              <div class="game-card__footer flex flex-wrap items-center justify-between gap-3">
+                <a href="games/les-veilleurs-de-brume.html" class="link-arrow">
+                  <span>Voir la fiche du jeu</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+                <a href="devlog.html#log-03" class="link-arrow">
+                  <span>Devlog</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 02 -->
+          <article id="projet-02" class="game-card" data-status="soon" data-reveal>
+            <div class="game-card__media">
+              <img
+                src="assets/images/games/projet-02.webp"
+                width="800"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+                alt="Illustration néon de Neon Calanques, jeu d'action Flexarion à venir">
+              <div class="game-card__badges">
+                <span class="tag">FLX-02</span>
+                <span class="status status--soon">À venir</span>
+              </div>
+            </div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Neon Calanques</h3>
+              <p class="game-card__desc">
+                Un roguelite nerveux où l’on traverse une Marseille futuriste, entre parkour solaire et créatures de lumière.
+              </p>
+              <dl class="game-card__facts">
+                <dt>Genre</dt>
+                <dd>Action roguelite</dd>
+                <dt>Plateformes</dt>
+                <dd>PC, consoles</dd>
+                <dt>Statut</dt>
+                <dd>À venir</dd>
+              </dl>
+              <div class="game-card__footer">
+                <a href="games/neon-calanques.html" class="link-arrow">
+                  <span>Voir la fiche du jeu</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Projet 03 -->
+          <article id="projet-03" class="game-card" data-status="soon" data-reveal>
+            <div class="game-card__media">
+              <img
+                src="assets/images/games/projet-03.webp"
+                width="800"
+                height="1000"
+                loading="lazy"
+                decoding="async"
+                alt="Illustration abstraite de Lisière, jeu de puzzle Flexarion à venir">
+              <div class="game-card__badges">
+                <span class="tag">FLX-03</span>
+                <span class="status status--soon">À venir</span>
+              </div>
+            </div>
+            <div class="game-card__body">
+              <h3 class="game-card__title">Lisière</h3>
+              <p class="game-card__desc">
+                Un puzzle contemplatif sur la frontière entre forêt et mémoire, construit autour de la lumière et du son.
+              </p>
+              <dl class="game-card__facts">
+                <dt>Genre</dt>
+                <dd>Puzzle contemplatif</dd>
+                <dt>Plateformes</dt>
+                <dd>PC, mobile</dd>
+                <dt>Statut</dt>
+                <dd>À venir</dd>
+              </dl>
+              <div class="game-card__footer">
+                <a href="games/lisiere.html" class="link-arrow">
+                  <span>Voir la fiche du jeu</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- État vide lorsqu'un filtre ne contient aucun jeu -->
+        <div class="empty-state mt-8" data-filter-empty hidden>
+          <p class="mono text-ember">Aucun titre disponible pour le moment</p>
+          <h3 class="h-sub mt-3">Nos premiers jeux sont encore en chantier</h3>
+          <p class="mt-3 text-muted max-w-xl mx-auto">
+            Aucun jeu vidéo de Flexarion n’est encore commercialisé ou téléchargeable. Suivez l’avancement de nos travaux dans le Devlog ou posez-nous vos questions directement.
+          </p>
+          <div class="mt-6 flex flex-wrap justify-center gap-4">
+            <a href="devlog.html" class="btn btn--small">Lire le Devlog</a>
+            <a href="contact.html" class="btn btn--small btn--primary">Contacter l’équipe</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  {{> footer}}
+</body>
+</html>
